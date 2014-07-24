@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rodrigo.tassinari@myfreecomm.com.br"]
   spec.summary       = %q{Official Ruby client for the Emites API.}
   spec.description   = %q{Official Ruby client for the Emites API. Emites is a system for creating "notas fiscais eletrônicas" (NFe / NFSe) in Brazil.}
-  spec.homepage      = "https://github.com/myfreecomm/emites-ruby-client"
+  spec.homepage      = "https://github.com/myfreecomm/emites-client-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
