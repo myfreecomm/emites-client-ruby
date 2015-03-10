@@ -1,10 +1,11 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "emites_client/version"
+
+require "emites/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "emites_client"
-  spec.version       = EmitesClient::VERSION
+  spec.name          = "emites"
+  spec.version       = Emites::VERSION
   spec.authors       = ["Rodrigo Tassinari de Oliveira"]
   spec.email         = ["rodrigo.tassinari@myfreecomm.com.br"]
   spec.summary       = %q{Official Ruby client for the Emites API.}

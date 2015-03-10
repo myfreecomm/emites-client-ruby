@@ -1,10 +1,7 @@
-require 'rest_client'
-require 'multi_json'
+require "emites/version"
+require "emites/configuration"
 
-require "emites_client/version"
-require "emites_client/configuration"
-
-module EmitesClient
+module Emites
   def self.configuration
     @configuration ||= Configuration.new
   end

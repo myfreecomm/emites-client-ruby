@@ -7,7 +7,7 @@ SimpleCov.start
 
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 
-require "emites_client"
+require "emites"
 require "pry"
 
 RSpec.configure do |c|
