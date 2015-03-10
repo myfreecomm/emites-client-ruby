@@ -2,6 +2,11 @@
 
 This is the official Ruby client for the [Emites](https://app.emites.com.br) API.
 
+[![Gem Version](https://badge.fury.io/rb/emites-client.png)](https://rubygems.org/gems/emites-client)
+[![Build Status](https://api.travis-ci.org/myfreecomm/emites-client-ruby.svg?branch=master)](https://travis-ci.org/myfreecomm/emites-client-ruby)
+[![Coverage Status](https://coveralls.io/repos/myfreecomm/emites-client-ruby/badge.png?branch=master)](https://coveralls.io/r/myfreecomm/emites-client-ruby)
+[![Code Climate Status](https://codeclimate.com/github/myfreecomm/emites-client-ruby.png)](https://codeclimate.com/github/myfreecomm/emites-client-ruby)
+
 ## Installation
 
 Add this line to your application's Gemfile:
