@@ -6,13 +6,15 @@ unless ENV["SKIP_CODE_CLIMATE_TEST_REPORTER"] == "true"
 end
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::HTMLFormatter
 ]
+
 SimpleCov.start do
   SimpleCov.maximum_coverage_drop 0.2
   SimpleCov.start do
-    add_group "Resources", "lib/resources"
-    add_filter "vendor/"
+    add_group  "Resources", "lib/emites/resources"
+    add_group  "Entities",  "lib/emites/entities"
+    add_filter "vendor"
   end
 end
 
