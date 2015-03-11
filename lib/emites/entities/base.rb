@@ -7,6 +7,12 @@ module Emites
         after_initialize(hash)
       end
 
+      def to_hash
+        self.class::ATTRIBUTES.each_with_object({}) do |attr, memo|
+          memo[attr] = send(attr)
+        end
+      end
+
       protected
 
       def after_initialize(hash)
