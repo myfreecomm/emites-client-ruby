@@ -1,5 +1,5 @@
-# TODO spec
 module Emites
+  # TODO spec
   class Http
     attr_reader :token
 
@@ -7,8 +7,8 @@ module Emites
      @token = token
     end
 
-    def get(path)
-      send_request(:get, path)
+    def get(path, &block)
+      send_request(:get, path, &block)
     end
 
     private
@@ -20,7 +20,9 @@ module Emites
         userpwd: "#{token}:x",
       )
       request.run
-      request.response
+      response = request.response
+      return yield(response) if block_given?
+      response
     end
   end
 end

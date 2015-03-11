@@ -1,14 +1,15 @@
 module Emites::Resources
   class Emitter
-    attr_accessor :http
+    attr_reader :http
 
     def initialize(http)
       @http = http
     end
 
     def list
-      response = http.get("/emitters")
-      build_collection(response)
+      http.get("/emitters") do |response|
+        build_collection(response)
+      end
     end
 
     private
