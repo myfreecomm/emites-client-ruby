@@ -1,5 +1,4 @@
 module Emites
-  # TODO spec
   class Http
     attr_reader :token
 

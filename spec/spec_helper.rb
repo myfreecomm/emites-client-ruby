@@ -34,6 +34,7 @@ RSpec.configure do |config|
 
   config.before(:each) do
     Emites.configuration.url = "https://sandbox.emites.com.br/api/v1"
+    Typhoeus::Expectation.clear
   end
 end
 
