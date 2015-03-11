@@ -17,4 +17,8 @@ module Emites
   def self.configure
     yield(configuration) if block_given?
   end
+
+  def self.client(token)
+    Client.new(token)
+  end
 end
