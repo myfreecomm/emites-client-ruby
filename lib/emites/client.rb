@@ -6,6 +6,10 @@ module Emites
       @token = token
     end
 
+    def emitters
+      Resources::Emitter.new(self)
+    end
+
     def authenticate
       request = Typhoeus::Request.new(
         Emites.configuration.url,
