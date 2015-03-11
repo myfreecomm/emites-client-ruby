@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 10 Mar 2015 20:12:59 GMT
+      - Wed, 11 Mar 2015 14:43:13 GMT
       Server:
       - nginx/1.6.2
       User-Agent:
@@ -129,5 +129,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.emites.com.br/api/v1/emitters
-  recorded_at: Tue, 10 Mar 2015 20:12:58 GMT
+  recorded_at: Wed, 11 Mar 2015 14:43:13 GMT
 recorded_with: VCR 2.9.3

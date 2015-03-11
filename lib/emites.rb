@@ -3,6 +3,7 @@ require "multi_json"
 require "emites/version"
 require "emites/configuration"
 require "emites/client"
+require "emites/http"
 
 require "emites/resources/emitter"
 

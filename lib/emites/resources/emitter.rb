@@ -1,21 +1,14 @@
 module Emites::Resources
   class Emitter
-    attr_accessor :client
+    attr_accessor :http
 
-    def initialize(client)
-      @client = client
+    def initialize(http)
+      @http = http
     end
 
-    def search
-      request = Typhoeus::Request.new(
-        "#{Emites.configuration.url}/emitters",
-        method: :get,
-        userpwd: "#{client.token}:x",
-      )
-      request.run
-      build_collection(request.response)
-    rescue
-
+    def list
+      response = http.get("/emitters")
+      build_collection(response)
     end
 
     private

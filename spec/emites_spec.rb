@@ -23,12 +23,10 @@ describe Emites do
   end
 
   describe ".client" do
-    let(:token) { "MYTOKEN" }
-    subject     { described_class.client(token) }
+    subject     { described_class.client("MYTOKEN") }
 
     it "returns an instance of Emites::Client" do
       expect(subject).to be_a(Emites::Client)
-      expect(subject.token).to eq(token)
     end
   end
 

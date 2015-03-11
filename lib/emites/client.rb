@@ -1,24 +1,13 @@
 module Emites
   class Client
-    attr_reader :token
+    attr_reader :http
 
     def initialize(token)
-      @token = token
+      @http = Http.new(token)
     end
 
     def emitters
-      Resources::Emitter.new(self)
+      Resources::Emitter.new(http)
     end
-
-    def authenticate
-      request = Typhoeus::Request.new(
-        Emites.configuration.url,
-        method: :get,
-        userpwd: "#{token}:x",
-      )
-      request.run
-      request.response.code == 200
-    end
-
   end
 end
