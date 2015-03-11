@@ -1,5 +1,5 @@
 require "spec_helper"
 
-describe Emites::Entities::Taker do
+describe Emites::Resources::Base do
   pending
 end

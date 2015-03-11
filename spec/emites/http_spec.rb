@@ -11,7 +11,7 @@ describe Http do
   before :each do
     Typhoeus.stub(/emites/).and_return(Typhoeus::Response.new)
     allow(Typhoeus::Request).to receive(:new).
-      and_return(double :request, run: true, response: nil)
+      and_return(double :request, run: true, response: OpenStruct.new(body: ""))
   end
 
   subject { Http.new(token) }

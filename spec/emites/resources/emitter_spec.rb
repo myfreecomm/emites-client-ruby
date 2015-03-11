@@ -2,7 +2,8 @@ require "spec_helper"
 include Emites::Resources
 
 describe Emitter do
-  let(:http) { Emites::Http.new("7A75E575CFDEDB91FF7E2CE22089181A") }
+  let(:http)          { Emites::Http.new("7A75E575CFDEDB91FF7E2CE22089181A") }
+  let(:entity_klass)  { Emites::Entities::Emitter }
 
   subject { described_class.new(http) }
 
@@ -11,13 +12,23 @@ describe Emitter do
   end
 
   describe "#list" do
-    it "list all emiiters if has no parameters" do
-      emiter1 = OpenStruct.new(id: 4)
-      emiter2 = OpenStruct.new(id: 10)
-      emiter3 = OpenStruct.new(id: 14)
-      VCR.use_cassette("list_emitters") do
-        expect(subject.list).to match_array [emiter1, emiter2, emiter3]
+    it "list all emitters if has no parameters" do
+      VCR.use_cassette("emitters/list") do
+        entities = subject.list
+        expect(entities).to be_a(Array)
+        entities.each do |e|
+          expect(e).to be_a(entity_klass)
+        end
       end
     end
   end
+
+  describe "#show" do
+    it "returns an instance of Emites::Entities::Emitter" do
+      VCR.use_cassette("emitters/show") do
+        expect(subject.show(4)).to be_a(entity_klass)
+      end
+    end
+  end
+
 end

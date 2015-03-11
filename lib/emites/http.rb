@@ -19,9 +19,15 @@ module Emites
         userpwd: "#{token}:x",
       )
       request.run
-      response = request.response
-      return yield(response) if block_given?
-      response
+
+      body =  begin
+                MultiJson.load(request.response.body)
+              rescue MultiJson::ParseError
+                {}
+              end
+
+      return yield(body) if block_given?
+      body
     end
   end
 end

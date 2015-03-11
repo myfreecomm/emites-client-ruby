@@ -5,6 +5,7 @@ require "emites/configuration"
 require "emites/client"
 require "emites/http"
 
+require "emites/resources/base"
 require "emites/resources/emitter"
 
 require "emites/entities/emitter"
