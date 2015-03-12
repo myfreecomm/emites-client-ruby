@@ -79,7 +79,7 @@ describe Emites::Resources::Emitter do
     it "deletes an emitter" do
       VCR.use_cassette("emitters/destroy/success") do
         result = subject.destroy(18)
-        expect(result).to eq({})
+        expect(result).to eq(true)
       end
     end
   end

@@ -35,30 +35,37 @@ module Emites
     def build_options(options)
       {
         userpwd:  "#{token}:x",
-        headers:  {
-          "Accept"        => "application/json",
-          "Content-Type"  => "application/json",
-          "User-Agent"    => Emites.configuration.user_agent
-        }
-      }.merge(options)
+        headers:  build_headers(options),
+        body:     build_body(options),
+        params:   options[:params],
+        method:   options[:method]
+      }.reject {|k,v| v.nil?}
+    end
+
+    def build_body(options)
+      body = options[:body]
+      body = MultiJson.dump(body) if body.is_a?(Hash)
+      body
+    end
+
+    def build_headers(options)
+      headers = options.fetch(:headers) { {} }
+
+      {
+        "Accept"        => "application/json",
+        "Content-Type"  => "application/json",
+        "User-Agent"    => Emites.configuration.user_agent
+      }.merge(headers)
     end
 
     def resolve_response!(response, &block)
       if response.success?
-        body = response_body(response.body)
-
-        block_given? ? yield(body) :body
+        block_given? ? yield(response) : response
       elsif response.timed_out?
         raise RequestTimeout
       else
         raise request_error(response)
       end
-    end
-
-    def response_body(body)
-      MultiJson.load(body)
-    rescue MultiJson::ParseError
-      {}
     end
 
     def request_error(response)
