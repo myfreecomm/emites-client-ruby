@@ -43,8 +43,9 @@ module Emites
       {
         userpwd:  "#{token}:x",
         headers:  {
-          "Accept"      => "application/json",
-          "User-Agent"  => Emites.configuration.user_agent
+          "Accept"        => "application/json",
+          "Content-Type"  => "application/json",
+          "User-Agent"    => Emites.configuration.user_agent
         }
       }.merge(options)
     end
@@ -61,7 +62,7 @@ module Emites
       elsif response.timed_out?
         raise RequestTimeout
       else
-        raise RequestError.new(code: response.code, message: response.status_message)
+        raise RequestError.new(code: response.code, message: response.status_message, body: response.body)
       end
     end
 

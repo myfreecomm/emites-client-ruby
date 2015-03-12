@@ -24,6 +24,12 @@ module Emites
         http.delete("/emitters/#{id}")
       end
 
+      def create(params)
+        http.post("/emitters", {body: params}) do |response|
+          build_entity(response)
+        end
+      end
+
     end
   end
 end

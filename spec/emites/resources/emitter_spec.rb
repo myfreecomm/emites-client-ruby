@@ -54,4 +54,34 @@ describe Emites::Resources::Emitter do
     end
   end
 
+  describe "#create" do
+    let(:params) do
+      {
+        email:            "wanderson.policarpo@myfreecomm.com.br",
+        social_reason:    "My Fake, Inc",
+        cnpj:             "01001001000113",
+        fancy_name:       "My Fake",
+        city_inscription: "3304557",
+        state:            "RJ",
+        city:             "3",
+        neighborhood:     "Icaraí",
+        street_type:      "RUA",
+        street:           "Avenida Roberto Silveira - de 472 ao fim - lado par",
+        number:           43,
+        zip_code:         "24230-163",
+        phone:            "2199999999",
+        certificate:      Base64.encode64(File.read("spec/fixtures/certificate.pfx")),
+        password:         "123456"
+      }
+    end
+
+    it "creates an emitter" do
+      VCR.use_cassette("emitters/create/success") do
+        entity = subject.create(params.to_json)
+        expect(entity).to be_a(entity_klass)
+        expect(entity.cnpj).to eq(params[:cnpj])
+      end
+    end
+  end
+
 end

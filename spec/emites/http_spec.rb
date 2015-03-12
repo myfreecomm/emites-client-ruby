@@ -27,6 +27,7 @@ describe Emites::Http do
              userpwd: "#{token}:x",
              headers:  {
                 "Accept"      => "application/json",
+                "Content-Type"  => "application/json",
                 "User-Agent"  => Emites.configuration.user_agent
               }
             )

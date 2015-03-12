@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.emites.com.br/api/v1/emitters
+    body:
+      encoding: UTF-8
+      string: '{"email":"wanderson.policarpo@myfreecomm.com.br","social_reason":"My
+        Fake, Inc","cnpj":"01001001000113","fancy_name":"My Fake","city_inscription":"3304557","state":"RJ","city":"3","neighborhood":"Icaraí","street_type":"RUA","street":"Avenida
+        Roberto Silveira - de 472 ao fim - lado par","number":43,"zip_code":"24230-163","phone":"2199999999","certificate":"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\n","password":"123456"}'
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 12 Mar 2015 13:23:25 GMT
+      Location:
+      - https://sandbox.emites.com.br/api/v1/emitters/24
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '1322'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJfbGlua3MiOiBbeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMu
+        Y29tLmJyL2FwaS92MS9lbWl0dGVycy8yNCIsICJtZXRob2QiOiAiR0VUIiwg
+        InJlbCI6ICJzZWxmIn0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRib3guZW1p
+        dGVzLmNvbS5ici9hcGkvdjEvZW1pdHRlcnMvMjQiLCAibWV0aG9kIjogIlBV
+        VCIsICJyZWwiOiAidXBkYXRlIn0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRi
+        b3guZW1pdGVzLmNvbS5ici9hcGkvdjEvZW1pdHRlcnMvMjQiLCAibWV0aG9k
+        IjogIlBBVENIIiwgInJlbCI6ICJwYXJ0aWFsX3VwZGF0ZSJ9LCB7ImhyZWYi
+        OiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIvYXBpL3YxL2VtaXR0
+        ZXJzLzI0IiwgIm1ldGhvZCI6ICJERUxFVEUiLCAicmVsIjogImRlc3Ryb3ki
+        fSwgeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMuY29tLmJyL2Vt
+        aXR0ZXJzL2VkaXQvMjQiLCAibWV0aG9kIjogIkdFVCIsICJyZWwiOiAiaHRt
+        bCJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIv
+        YXBpL3YxL2VtaXR0ZXJzLzI0L3NlcmllcyIsICJtZXRob2QiOiAiR0VUIiwg
+        InJlbCI6ICJzZXJpZXMifV0sICJjaXR5IjogeyJuYW1lIjogIk5pdGVyw7Np
+        IiwgInN0YXRlIjogIlJKIiwgImNpdHlfY29kZSI6IDMzMDMzMDIsICJpc19i
+        ZXRhIjogZmFsc2V9LCAiY2VydGlmaWNhdGVfZmlsZW5hbWUiOiAiY2VydGlm
+        aWNhdGUucGZ4IiwgImlkIjogMjQsICJhY2NvdW50X2lkIjogNCwgImVtYWls
+        IjogIndhbmRlcnNvbi5wb2xpY2FycG9AbXlmcmVlY29tbS5jb20uYnIiLCAi
+        Y25waiI6ICIwMTAwMTAwMTAwMDExMyIsICJzb2NpYWxfcmVhc29uIjogIk15
+        IEZha2UsIEluYyIsICJmYW5jeV9uYW1lIjogIk15IEZha2UiLCAic3RhdGVf
+        aW5zY3JpcHRpb24iOiAiIiwgImNpdHlfaW5zY3JpcHRpb24iOiAiMzMwNDU1
+        NyIsICJuZWlnaGJvcmhvb2QiOiAiSWNhcmHDrSIsICJzdHJlZXQiOiAiQXZl
+        bmlkYSBSb2JlcnRvIFNpbHZlaXJhIC0gZGUgNDcyIGFvIGZpbSAtIGxhZG8g
+        cGFyIiwgIm51bWJlciI6ICI0MyIsICJjb21wbGVtZW50IjogbnVsbCwgInpp
+        cF9jb2RlIjogIjI0MjMwMTYzIiwgInBob25lIjogIjIxOTk5OTk5OTkiLCAi
+        bmF0aW9uYWxfc2ltcGxlX29wdGFudCI6IGZhbHNlLCAiY3VsdHVyYWxfcHJv
+        bW90ZXIiOiBmYWxzZSwgImlzX2FjdGl2ZSI6IGZhbHNlLCAiZW52aXJvbm1l
+        bnQiOiAic2FuZGJveCIsICJsYXRlc3Rfc2VyaWUiOiBudWxsLCAibGF0ZXN0
+        X251bWJlciI6IG51bGwsICJjb3VudHJ5X2NvZGUiOiAiMDEwNTgiLCAic3Ry
+        ZWV0X3R5cGUiOiAiUlVBIn0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/emitters
+  recorded_at: Thu, 12 Mar 2015 13:23:25 GMT
+recorded_with: VCR 2.9.3
