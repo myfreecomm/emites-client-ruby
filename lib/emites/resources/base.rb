@@ -7,17 +7,23 @@ module Emites
         @http = http
       end
 
+      def parsed_body(response)
+        MultiJson.load(response.body)
+      rescue MultiJson::ParseError
+        {}
+      end
+
       protected
 
       def respond_with_collection(response)
-        hash = parse_body!(response)
+        hash = parsed_body(response)
         hash["collection"].map do |item|
           build_item(item)
         end
       end
 
       def respond_with_entity(response)
-        item = parse_body!(response)
+        item = parsed_body(response)
         build_item(item)
       end
 
@@ -28,12 +34,6 @@ module Emites
 
       def base_klass
         self.class.name.split("::").last.to_sym
-      end
-
-      def parse_body!(response)
-        MultiJson.load(response.body)
-      rescue MultiJson::ParseError
-        {}
       end
 
     end
