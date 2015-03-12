@@ -19,12 +19,12 @@ describe Emites::Http do
 
   subject { described_class.new(token) }
 
-  describe "#get" do
-    it "sends a GET request to emites API" do
-      subject.get("/some_resource")
+  shared_examples "verbs" do |verb|
+    it "sends a #{verb.to_s.upcase} request to emites API" do
+      subject.send(verb, "/some_resource")
       expect(request).to have_received(:new).
         with("https://sandbox.emites.com.br/api/v1/some_resource",
-             method: :get,
+             method: verb,
              userpwd: "#{token}:x",
              headers:  {
                 "Accept"      => "application/json",
@@ -40,7 +40,7 @@ describe Emites::Http do
       allow(Typhoeus::Request).to receive(:new).
         and_return(double :request, run: true, response: response)
 
-      expect { subject.get("/some_resource") }.to raise_error(Emites::RequestTimeout)
+      expect { subject.send(verb, "/some_resource") }.to raise_error(Emites::RequestTimeout)
     end
 
     it 'resquests error' do
@@ -49,24 +49,28 @@ describe Emites::Http do
       allow(Typhoeus::Request).to receive(:new).
         and_return(double :request, run: true, response: response)
 
-      expect { subject.get('/some_resource') }.to raise_error(Emites::RequestError)
+      expect { subject.send(verb, '/some_resource') }.to raise_error(Emites::RequestError)
     end
   end
 
+  describe "#get" do
+    it_behaves_like "verbs", :get
+  end
+
   describe "#post" do
-    pending
+    it_behaves_like "verbs", :post
   end
 
   describe "#put" do
-    pending
+    it_behaves_like "verbs", :put
   end
 
   describe "#patch" do
-    pending
+    it_behaves_like "verbs", :patch
   end
 
   describe "#delete" do
-    pending
+    it_behaves_like "verbs", :delete
   end
 
 end
