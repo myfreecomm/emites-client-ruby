@@ -10,4 +10,10 @@ describe Emites::Client do
     end
   end
 
+  describe "#webhooks" do
+    it "returns an instance of Emites::Resources::Webhook" do
+      expect(subject.webhooks).to be_a(Emites::Resources::Webhook)
+    end
+  end
+
 end
