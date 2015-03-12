@@ -8,7 +8,7 @@ describe Emites::Entities::Webhook do
     })
   end
 
-  it { is_expected.to have_attr_accessor(:id) }
-  it { is_expected.to have_attr_accessor(:name) }
-  it { is_expected.to have_attr_accessor(:url) }
+  [:id, :name, :url].each do |attr|
+    it { is_expected.to have_attr_accessor(attr) }
+  end
 end
