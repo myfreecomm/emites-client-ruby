@@ -10,6 +10,18 @@ describe Emites::Resources::Webhook do
     expect(subject.http).to eq http
   end
 
+  describe "#list" do
+    it "returns an array of Webhooks" do
+      VCR.use_cassette("webhooks/list/success") do
+        webhooks = subject.list
+        expect(webhooks).to be_a(Array)
+        webhooks.each do |e|
+          expect(e).to be_a(entity_klass)
+        end
+      end
+    end
+  end
+
   describe "#update" do
     it "returns an Webhook instance updated" do
       VCR.use_cassette("webhooks/update/success") do
