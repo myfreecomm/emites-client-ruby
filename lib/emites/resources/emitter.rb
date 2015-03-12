@@ -4,29 +4,31 @@ module Emites
 
       def list
         http.get("/emitters") do |response|
-          build_collection(response)
+          respond_with_collection(response)
         end
       end
 
       def search(params)
         http.get("/emitters", {params: params}) do |response|
-          build_collection(response)
+          respond_with_collection(response)
         end
       end
 
       def show(id)
         http.get("/emitters/#{id}") do |response|
-          build_entity(response)
+          respond_with_entity(response)
         end
       end
 
       def destroy(id)
-        http.delete("/emitters/#{id}")
+        http.delete("/emitters/#{id}") do |response|
+          response.code == 204
+        end
       end
 
       def create(params)
         http.post("/emitters", {body: params}) do |response|
-          build_entity(response)
+          respond_with_entity(response)
         end
       end
 

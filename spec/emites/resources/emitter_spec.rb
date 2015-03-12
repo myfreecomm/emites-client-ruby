@@ -49,7 +49,7 @@ describe Emites::Resources::Emitter do
     it "deletes an emitter" do
       VCR.use_cassette("emitters/destroy/success") do
         result = subject.destroy(18)
-        expect(result).to eq({})
+        expect(result).to eq(true)
       end
     end
   end
@@ -77,7 +77,7 @@ describe Emites::Resources::Emitter do
 
     it "creates an emitter" do
       VCR.use_cassette("emitters/create/success") do
-        entity = subject.create(params.to_json)
+        entity = subject.create(params)
         expect(entity).to be_a(entity_klass)
         expect(entity.cnpj).to eq(params[:cnpj])
       end
