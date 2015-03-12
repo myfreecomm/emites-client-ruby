@@ -33,9 +33,17 @@ describe Emites::Resources::Emitter do
 
     it "creates an emitter" do
       VCR.use_cassette("emitters/create/success") do
-        entity = subject.create(params.to_json)
+        entity = subject.create(params)
         expect(entity).to be_a(entity_klass)
         expect(entity.cnpj).to eq(params[:cnpj])
+      end
+    end
+
+    it "returns RequestError" do
+      VCR.use_cassette("emitters/create/error") do
+        expect {
+          subject.create({ email: "email@example.com" })
+        }.to raise_error(Emites::RequestError)
       end
     end
   end
@@ -46,6 +54,14 @@ describe Emites::Resources::Emitter do
         entity = subject.info(4)
         expect(entity).to be_a(entity_klass)
         expect(entity.cnpj).to eq("17799377000155")
+      end
+    end
+
+    it "returns RequestError" do
+      VCR.use_cassette("emitters/info/error") do
+        expect {
+          subject.info(2)
+        }.to raise_error(Emites::RequestError)
       end
     end
   end
@@ -65,12 +81,20 @@ describe Emites::Resources::Emitter do
   describe "#search" do
     it "returns an array of emitters where CNPJ is '17799377000155'" do
       VCR.use_cassette("emitters/search/success") do
-        entities = subject.search({cnpj: "17799377000155"})
+        entities = subject.search({ cnpj: "17799377000155" })
         expect(entities).to be_a(Array)
         expect(entities.count).to eq(1)
         entities.each do |e|
           expect(e).to be_a(entity_klass)
         end
+      end
+    end
+
+    it "returns empty" do
+      VCR.use_cassette("emitters/search/returns_empty") do
+        entities = subject.search({ cnpj: "1775" })
+        expect(entities).to be_a(Array)
+        expect(entities).to be_empty
       end
     end
   end
@@ -80,6 +104,14 @@ describe Emites::Resources::Emitter do
       VCR.use_cassette("emitters/destroy/success") do
         result = subject.destroy(18)
         expect(result).to be_truthy
+      end
+    end
+
+    it "returns RequestError" do
+      VCR.use_cassette("emitters/destroy/error") do
+        expect {
+          subject.destroy(2)
+        }.to raise_error(Emites::RequestError)
       end
     end
   end

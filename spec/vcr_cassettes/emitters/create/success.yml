@@ -25,9 +25,9 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 12 Mar 2015 13:23:25 GMT
+      - Thu, 12 Mar 2015 17:55:24 GMT
       Location:
-      - https://sandbox.emites.com.br/api/v1/emitters/24
+      - https://sandbox.emites.com.br/api/v1/emitters/25
       Server:
       - nginx/1.6.2
       User-Agent:
@@ -44,22 +44,22 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJfbGlua3MiOiBbeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMu
-        Y29tLmJyL2FwaS92MS9lbWl0dGVycy8yNCIsICJtZXRob2QiOiAiR0VUIiwg
+        Y29tLmJyL2FwaS92MS9lbWl0dGVycy8yNSIsICJtZXRob2QiOiAiR0VUIiwg
         InJlbCI6ICJzZWxmIn0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRib3guZW1p
-        dGVzLmNvbS5ici9hcGkvdjEvZW1pdHRlcnMvMjQiLCAibWV0aG9kIjogIlBV
+        dGVzLmNvbS5ici9hcGkvdjEvZW1pdHRlcnMvMjUiLCAibWV0aG9kIjogIlBV
         VCIsICJyZWwiOiAidXBkYXRlIn0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRi
-        b3guZW1pdGVzLmNvbS5ici9hcGkvdjEvZW1pdHRlcnMvMjQiLCAibWV0aG9k
+        b3guZW1pdGVzLmNvbS5ici9hcGkvdjEvZW1pdHRlcnMvMjUiLCAibWV0aG9k
         IjogIlBBVENIIiwgInJlbCI6ICJwYXJ0aWFsX3VwZGF0ZSJ9LCB7ImhyZWYi
         OiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIvYXBpL3YxL2VtaXR0
-        ZXJzLzI0IiwgIm1ldGhvZCI6ICJERUxFVEUiLCAicmVsIjogImRlc3Ryb3ki
+        ZXJzLzI1IiwgIm1ldGhvZCI6ICJERUxFVEUiLCAicmVsIjogImRlc3Ryb3ki
         fSwgeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMuY29tLmJyL2Vt
-        aXR0ZXJzL2VkaXQvMjQiLCAibWV0aG9kIjogIkdFVCIsICJyZWwiOiAiaHRt
+        aXR0ZXJzL2VkaXQvMjUiLCAibWV0aG9kIjogIkdFVCIsICJyZWwiOiAiaHRt
         bCJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIv
-        YXBpL3YxL2VtaXR0ZXJzLzI0L3NlcmllcyIsICJtZXRob2QiOiAiR0VUIiwg
+        YXBpL3YxL2VtaXR0ZXJzLzI1L3NlcmllcyIsICJtZXRob2QiOiAiR0VUIiwg
         InJlbCI6ICJzZXJpZXMifV0sICJjaXR5IjogeyJuYW1lIjogIk5pdGVyw7Np
         IiwgInN0YXRlIjogIlJKIiwgImNpdHlfY29kZSI6IDMzMDMzMDIsICJpc19i
         ZXRhIjogZmFsc2V9LCAiY2VydGlmaWNhdGVfZmlsZW5hbWUiOiAiY2VydGlm
-        aWNhdGUucGZ4IiwgImlkIjogMjQsICJhY2NvdW50X2lkIjogNCwgImVtYWls
+        aWNhdGUucGZ4IiwgImlkIjogMjUsICJhY2NvdW50X2lkIjogNCwgImVtYWls
         IjogIndhbmRlcnNvbi5wb2xpY2FycG9AbXlmcmVlY29tbS5jb20uYnIiLCAi
         Y25waiI6ICIwMTAwMTAwMTAwMDExMyIsICJzb2NpYWxfcmVhc29uIjogIk15
         IEZha2UsIEluYyIsICJmYW5jeV9uYW1lIjogIk15IEZha2UiLCAic3RhdGVf
@@ -76,5 +76,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.emites.com.br/api/v1/emitters
-  recorded_at: Thu, 12 Mar 2015 13:23:25 GMT
+  recorded_at: Thu, 12 Mar 2015 17:55:24 GMT
 recorded_with: VCR 2.9.3
