@@ -8,6 +8,7 @@ require "emites/http"
 require "emites/resources/base"
 require "emites/resources/emitter"
 
+require "emites/entities/base"
 require "emites/entities/emitter"
 require "emites/entities/taker"
 
