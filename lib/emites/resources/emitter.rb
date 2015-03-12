@@ -2,6 +2,18 @@ module Emites
   module Resources
     class Emitter < Base
 
+      def create(params)
+        http.post("/emitters", { body: params }) do |response|
+          build_entity(response)
+        end
+      end
+
+      def info(id)
+        http.get("/emitters/#{id}") do |response|
+          build_entity(response)
+        end
+      end
+
       def list
         http.get("/emitters") do |response|
           build_collection(response)
@@ -14,22 +26,9 @@ module Emites
         end
       end
 
-      def show(id)
-        http.get("/emitters/#{id}") do |response|
-          build_entity(response)
-        end
-      end
-
       def destroy(id)
         http.delete("/emitters/#{id}")
       end
-
-      def create(params)
-        http.post("/emitters", {body: params}) do |response|
-          build_entity(response)
-        end
-      end
-
     end
   end
 end

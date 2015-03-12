@@ -6,6 +6,7 @@ describe Emites::Http do
     class_spy(Typhoeus::Request).
       as_stubbed_const(transfer_nested_constants: true)
   end
+
   let!(:response) do
     Typhoeus::Response.new(return_code: :ok, code: 200, body: "OK")
   end
@@ -31,6 +32,24 @@ describe Emites::Http do
                 "User-Agent"  => Emites.configuration.user_agent
               }
             )
+    end
+
+    it "raise RequestTimeout when timed out" do
+      response = Typhoeus::Response.new(return_code: :operation_timedout)
+      Typhoeus.stub(/emites/).and_return(response)
+      allow(Typhoeus::Request).to receive(:new).
+        and_return(double :request, run: true, response: response)
+
+      expect { subject.get("/some_resource") }.to raise_error(Emites::RequestTimeout)
+    end
+
+    it 'resquests error' do
+      response = Typhoeus::Response.new(return_code: :ok, code: 500, body: "")
+      Typhoeus.stub(/emites/).and_return(response)
+      allow(Typhoeus::Request).to receive(:new).
+        and_return(double :request, run: true, response: response)
+
+      expect { subject.get('/some_resource') }.to raise_error(Emites::RequestError)
     end
   end
 
