@@ -53,24 +53,9 @@ describe Emites::Http do
     end
   end
 
-  describe "#get" do
-    it_behaves_like "verbs", :get
+  [:get, :post, :put, :patch, :delete].each do |verb|
+    describe "##{verb.to_s}" do
+      it_behaves_like "verbs", verb
+    end
   end
-
-  describe "#post" do
-    it_behaves_like "verbs", :post
-  end
-
-  describe "#put" do
-    it_behaves_like "verbs", :put
-  end
-
-  describe "#patch" do
-    it_behaves_like "verbs", :patch
-  end
-
-  describe "#delete" do
-    it_behaves_like "verbs", :delete
-  end
-
 end
