@@ -29,6 +29,8 @@ VCR.configure do |config|
   config.hook_into :typhoeus
 end
 
+Dir["spec/support/**/*.rb"].each { |f| load f }
+
 RSpec.configure do |config|
   config.mock_with :rspec
 
