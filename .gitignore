@@ -23,3 +23,9 @@ vendor
 *.o
 *.a
 mkmf.log
+*.swp
+*.swo
+*~
+.ruby-gemset
+.ruby-version
+doc

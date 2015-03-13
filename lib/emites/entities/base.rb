@@ -7,6 +7,12 @@ module Emites
         after_initialize(hash)
       end
 
+      def to_hash
+        self.class::ATTRIBUTES.each_with_object({}) do |attr, memo|
+          memo[attr] = send(attr)
+        end
+      end
+
       protected
 
       def after_initialize(hash)
@@ -14,22 +20,13 @@ module Emites
 
       def objectify_hash(hash)
         hash.each do |property, value|
-          build_property(property, value) if buildable?(property)
+          build_property(property, value)
         end
       end
 
       def build_property(property, value)
-        self.define_singleton_method(property) do
-          value
-        end unless respond_to?(property)
-      end
-
-      def buildable?(property)
-        buildable_properties == :all || buildable_properties.include?(property)
-      end
-
-      def buildable_properties
-        :all
+        setter = "#{property}="
+        send(setter, value) if respond_to?(setter)
       end
 
     end

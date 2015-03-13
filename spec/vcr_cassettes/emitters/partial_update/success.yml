@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://sandbox.emites.com.br/api/v1/emitters/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Allow:
+      - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 11 Mar 2015 21:39:20 GMT
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Accept-Encoding
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '1987'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJfbGlua3MiOiBbeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMu
+        Y29tLmJyL2FwaS92MS9lbWl0dGVycy80IiwgIm1ldGhvZCI6ICJHRVQiLCAi
+        cmVsIjogInNlbGYifSwgeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0
+        ZXMuY29tLmJyL2FwaS92MS9lbWl0dGVycy80IiwgIm1ldGhvZCI6ICJQVVQi
+        LCAicmVsIjogInVwZGF0ZSJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94
+        LmVtaXRlcy5jb20uYnIvYXBpL3YxL2VtaXR0ZXJzLzQiLCAibWV0aG9kIjog
+        IlBBVENIIiwgInJlbCI6ICJwYXJ0aWFsX3VwZGF0ZSJ9LCB7ImhyZWYiOiAi
+        aHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIvYXBpL3YxL2VtaXR0ZXJz
+        LzQiLCAibWV0aG9kIjogIkRFTEVURSIsICJyZWwiOiAiZGVzdHJveSJ9LCB7
+        ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIvZW1pdHRl
+        cnMvZWRpdC80IiwgIm1ldGhvZCI6ICJHRVQiLCAicmVsIjogImh0bWwifSwg
+        eyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMuY29tLmJyL2FwaS92
+        MS9lbWl0dGVycy80L3NlcmllcyIsICJtZXRob2QiOiAiR0VUIiwgInJlbCI6
+        ICJzZXJpZXMifV0sICJjaXR5X2lkIjogMiwgImlkIjogNCwgImFjY291bnRf
+        aWQiOiA0LCAiZW1haWwiOiAiY29tZXJjaWFsQG15ZmluYW5jZS5jb20uYnIi
+        LCAiY25waiI6ICIxNzc5OTM3NzAwMDE1NSIsICJzb2NpYWxfcmVhc29uIjog
+        Ik15ZmluYW5jZSBDb25zdWx0b3JpYSBlIEluZm9ybcOhdGljYSBMdGRhIE1F
+        IiwgImZhbmN5X25hbWUiOiAiTXlmaW5hbmNlIiwgInN0YXRlX2luc2NyaXB0
+        aW9uIjogIklTRU5UTyIsICJjaXR5X2luc2NyaXB0aW9uIjogIjA1NzI1OTg0
+        IiwgIm5laWdoYm9yaG9vZCI6ICJDZW50cm8iLCAic3RyZWV0IjogIlJ1YSBk
+        byBDYXJtbyIsICJudW1iZXIiOiAiNDMiLCAiY29tcGxlbWVudCI6ICI4wrog
+        YW5kYXIiLCAiemlwX2NvZGUiOiAiMjAwMTEwMjAiLCAicGhvbmUiOiAiMjEz
+        NTAxMTAwMCIsICJjZXJ0aWZpY2F0ZSI6ICJjZXJ0aWZpY2F0ZXMvNC8xNzc5
+        OTM3NzAwMDE1NS9teWZpbmFuY2VfYTFfMjAxNS5wZngiLCAicGFzc3dvcmQi
+        OiAiNTczdjhoZ2RMOVdkaWkxVzhzcTl6eFFFdmE5aWJ2U1czWFB2aTk1cWls
+        ZkVRZ0h5a05xU01TUEJJOEo3RmdxQjREV0NTdWd3cldsVjhQdE1jUUpRNURv
+        RE9RNTFjSTBsWkUzcmlnVEt4MS9qQWdhK1dyOCtDbnI0TE9kZEZMWnpSWTAr
+        M3NSSVE5em9vc3Z0QzRzbUs4THVmL3hKRWdyUHlOUlRpQ2VmcEFWQmxadDFl
+        RXQ0TjNLdWNZeDE0V2lOZ2YrcDU0WGFXdVNsZjE4bUxYZ2R2RmtTM1dKSVZJ
+        WDRaVGIrK0hTYUI4WVVvSklxVHVCQ2h3NXhqZ2ViOGhZRnhzbDQ5QUp6Zjht
+        UEc1RFo0Z3FRWEt0QWtPVDZkSEtOdnBrcnZZMWFjT1VRUzMvaDRBdERmK3Nt
+        YnNmSHBNcDF2TTlPY1VkN1hPWjNPUXVGbExSYW9tQzBKY1pyL1BlK2xNUEtu
+        eS9ZZjZ6WFZhdE9ZUkJ6S25lVHEyMFlTS0dpTXJhZlo5WGMvVzFiOTcvVkpu
+        WlRybGdqKzlGMHltTWpSVGI5WTYraXpqc1lFYnhEV0F1dDhZTFE2d0c4WnMv
+        b2hac01PSG9Id2NmMVJ2OGh3bHpWZXRVZyt1a1BYM2hKY0VaUTJRcmZVZjZk
+        UHpveU9nRE02c0JQNmhwdXlZc0dreFlpSFBtKzU0RVdnOGZCVFVlUGVUNFZp
+        WXovRlN2amM0UTFZbTREK0dLbyt0VFZWanJDTnhBZWNUcWtXcXdaZ0NoTlZw
+        TU5MeUIybTgwaXBNNG1MS1pqMDFubit3L04xMnlmZ0xMTC90amwwVFpJQ05I
+        Q0YxUnJOQnkxZ0NUa0hTTWptN0V1TXVmSVhHUkFwa2wwSjZuVklDdmNEbGZS
+        MXc3Vkxwb083Z3M9IiwgIm5hdGlvbmFsX3NpbXBsZV9vcHRhbnQiOiBmYWxz
+        ZSwgImN1bHR1cmFsX3Byb21vdGVyIjogZmFsc2UsICJpc19hY3RpdmUiOiB0
+        cnVlLCAidG9fcmVtb3ZlIjogZmFsc2UsICJlbnZpcm9ubWVudCI6ICJzYW5k
+        Ym94IiwgImxhdGVzdF9zZXJpZSI6ICJNWUZDIiwgImxhdGVzdF9udW1iZXIi
+        OiAxMCwgImNvdW50cnlfY29kZSI6ICIwMTA1OCIsICJzdHJlZXRfdHlwZSI6
+        ICJSVUEifQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/emitters/4
+  recorded_at: Wed, 11 Mar 2015 21:39:20 GMT
+recorded_with: VCR 2.9.3

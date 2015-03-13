@@ -5,9 +5,13 @@ require "emites/configuration"
 require "emites/client"
 require "emites/http"
 
+require "emites/resources/base"
 require "emites/resources/emitter"
+require "emites/resources/webhook"
 
+require "emites/entities/base"
 require "emites/entities/emitter"
+require "emites/entities/webhook"
 require "emites/entities/taker"
 
 module Emites

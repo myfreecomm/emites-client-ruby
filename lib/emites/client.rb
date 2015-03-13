@@ -13,5 +13,9 @@ module Emites
     def emitters
       Resources::Emitter.new(http)
     end
+
+    def webhooks
+      Resources::Webhook.new(http)
+    end
   end
 end

@@ -2,43 +2,46 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.emites.com.br/api/v1
+    uri: https://sandbox.emites.com.br/api/v1/emitters/2
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
   response:
     status:
-      code: 401
-      message: UNAUTHORIZED
+      code: 404
+      message: NOT FOUND
     headers:
       Allow:
-      - GET, HEAD, OPTIONS
+      - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
       Content-Type:
       - application/json
       Date:
-      - Tue, 10 Mar 2015 19:08:36 GMT
+      - Thu, 12 Mar 2015 18:14:28 GMT
       Server:
       - nginx/1.6.2
       User-Agent:
       - emites-sandbox-v1
       Vary:
+      - Accept-Encoding
       - Cookie
-      WWW-Authenticate:
-      - Basic realm="api"
       X-Frame-Options:
       - SAMEORIGIN
       Content-Length:
-      - '29'
+      - '23'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"detail": "Bad credentials"}'
+      string: '{"detail": "Not found"}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.emites.com.br/api/v1
-  recorded_at: Tue, 10 Mar 2015 19:08:36 GMT
+      effective_url: https://sandbox.emites.com.br/api/v1/emitters/2
+  recorded_at: Thu, 12 Mar 2015 18:14:28 GMT
 recorded_with: VCR 2.9.3

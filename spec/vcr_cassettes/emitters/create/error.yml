@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.emites.com.br/api/v1/emitters
+    body:
+      encoding: UTF-8
+      string: '{"email":"email@example.com"}'
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: UNPROCESSABLE ENTITY
+    headers:
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 12 Mar 2015 18:01:52 GMT
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '453'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjbnBqIjogWyJFc3RlIGNhbXBvIMOpIG9icmlnYXTDs3Jpby4iXSwgIm5l
+        aWdoYm9yaG9vZCI6IFsiRXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8uIl0s
+        ICJzb2NpYWxfcmVhc29uIjogWyJFc3RlIGNhbXBvIMOpIG9icmlnYXTDs3Jp
+        by4iXSwgImNlcnRpZmljYXRlIjogWyJFc3RlIGNhbXBvIMOpIG9icmlnYXTD
+        s3Jpby4iXSwgImZhbmN5X25hbWUiOiBbIkVzdGUgY2FtcG8gw6kgb2JyaWdh
+        dMOzcmlvLiJdLCAibnVtYmVyIjogWyJFc3RlIGNhbXBvIMOpIG9icmlnYXTD
+        s3Jpby4iXSwgInBob25lIjogWyJFc3RlIGNhbXBvIMOpIG9icmlnYXTDs3Jp
+        by4iXSwgInN0cmVldCI6IFsiRXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8u
+        Il0sICJwYXNzd29yZCI6IFsiRXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8u
+        Il0sICJ6aXBfY29kZSI6IFsiRXN0ZSBjYW1wbyDDqSBvYnJpZ2F0w7NyaW8u
+        Il19
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/emitters
+  recorded_at: Thu, 12 Mar 2015 18:01:52 GMT
+recorded_with: VCR 2.9.3
