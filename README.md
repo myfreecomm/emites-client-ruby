@@ -11,7 +11,7 @@ This is the official Ruby client for the [Emites](https://app.emites.com.br) API
 
 Add this line to your application's Gemfile:
 
-    gem 'emites_client'
+    gem 'emites-client'
 
 And then execute:
 
@@ -19,7 +19,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install emites_client
+    $ gem install emites-client
 
 ## Usage
 
