@@ -33,4 +33,15 @@ describe Emites::Resources::Nfse do
     end
   end
 
+  describe "#status" do
+    it "returns a Nfse instance status representation" do
+      VCR.use_cassette("nfse/status/success") do
+        nfse_status = subject.status(456)
+        expect(nfse_status).to be_a(Emites::Entities::NfseStatus)
+        expect(nfse_status.status).to eq("accepted")
+        expect(nfse_status.description).to eq("Processado pela Sefaz")
+      end
+    end
+  end
+
 end

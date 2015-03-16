@@ -15,25 +15,24 @@ module Emites
 
       protected
 
-      def respond_with_collection(response)
+      def respond_with_collection(response, naked_klass = entity_klass)
         hash = parsed_body(response)
         hash["collection"].map do |item|
-          build_item(item)
+          naked_klass.new(item)
         end
       end
 
-      def respond_with_entity(response)
+      def respond_with_entity(response, naked_klass = entity_klass)
         item = parsed_body(response)
-        build_item(item)
-      end
-
-      def build_item(item)
-        entity_klass = Emites::Entities.const_get(base_klass)
-        entity_klass.new(item)
+        naked_klass.new(item)
       end
 
       def base_klass
-        self.class.name.split("::").last.to_sym
+        @base_klass ||= self.class.name.split("::").last.to_sym
+      end
+
+      def entity_klass
+        @entity_klass ||= Emites::Entities.const_get(base_klass)
       end
 
     end

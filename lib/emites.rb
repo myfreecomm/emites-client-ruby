@@ -13,6 +13,7 @@ require "emites/entities/taker_address"
 require "emites/entities/taker_contact"
 require "emites/entities/taker"
 require "emites/entities/nfse"
+require "emites/entities/nfse_status"
 
 require "emites/resources/base"
 require "emites/resources/emitter"

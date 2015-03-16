@@ -46,6 +46,21 @@ module Emites
         end
       end
 
+      # Retrieves a NfseStatus by it's id
+      #
+      # [API]
+      #   Method: <tt>GET /api/v1/nfse/:id/status</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#status
+      #
+      # @param id [Integer] the Nfse id
+      # @return [Emites::Entities::NfseStatus] the NfseStatus by it's id
+      def status(id)
+        http.get("/nfse/#{id}/status") do |response|
+          respond_with_entity(response, Entities::NfseStatus)
+        end
+      end
+
     end
   end
 end
