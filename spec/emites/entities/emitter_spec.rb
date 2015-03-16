@@ -1,23 +1,20 @@
 require "spec_helper"
 
 describe Emites::Entities::Emitter do
-  subject do
-    described_class.new({
-      name: "RSpec Subject",
-      url:  "http://requestb.in/1mayrfq1"
-    })
+  let(:attributes) do
+    {
+
+    }
   end
 
-  [
-    :id, :account_id, :city, :certificate_filename,
-    :email, :cnpj, :social_reason, :fancy_name,
-    :state_inscription, :city_inscription,
-    :neighborhood, :street, :number, :complement,
-    :zip_code, :phone, :national_simple_optant,
-    :cultural_promoter, :is_active,
-    :environment, :latest_serie,
-    :latest_number, :country_code, :street_type,
-  ].each do |attr|
-    it { is_expected.to have_attr_accessor(:street_type) }
-  end
+  subject { described_class.new(attributes) }
+
+  it_behaves_like "entity_attributes", [
+    :id, :email, :social_reason, :cnpj, :fancy_name,
+    :state_inscription, :city_inscription, :state, :city,
+    :neighborhood, :street_type, :street, :number, :zip_code,
+    :complement, :phone, :certificate, :password, :environment,
+    :filename, :latest_serie, :latest_number, :code_tax_regime,
+    :national_simple_optant, :cultural_promoter
+  ]
 end
