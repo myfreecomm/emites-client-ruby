@@ -12,10 +12,12 @@ require "emites/entities/webhook"
 require "emites/entities/taker_address"
 require "emites/entities/taker_contact"
 require "emites/entities/taker"
+require "emites/entities/nfse"
 
 require "emites/resources/base"
 require "emites/resources/emitter"
 require "emites/resources/webhook"
+require "emites/resources/nfse"
 
 
 module Emites

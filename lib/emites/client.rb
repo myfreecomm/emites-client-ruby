@@ -17,5 +17,9 @@ module Emites
     def webhooks
       Resources::Webhook.new(http)
     end
+
+    def nfse
+      Resources::Nfse.new(http)
+    end
   end
 end

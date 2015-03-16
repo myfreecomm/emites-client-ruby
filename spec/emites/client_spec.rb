@@ -16,4 +16,10 @@ describe Emites::Client do
     end
   end
 
+  describe "#nfse" do
+    it "returns an instance of Emites::Resources::Nfse" do
+      expect(subject.nfse).to be_a(Emites::Resources::Nfse)
+    end
+  end
+
 end
