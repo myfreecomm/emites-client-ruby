@@ -51,9 +51,9 @@ describe Emites::Resources::Webhook do
 
     it "creates an webhook" do
       VCR.use_cassette("webhooks/create/success") do
-        entity = subject.create(params)
-        expect(entity).to be_a(entity_klass)
-        expect(entity.name).to eq(params[:name])
+        webhook = subject.create(params)
+        expect(webhook).to be_a(entity_klass)
+        expect(webhook.name).to eq(params[:name])
       end
     end
   end

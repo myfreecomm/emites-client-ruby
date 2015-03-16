@@ -1,8 +1,8 @@
 module Emites
   class Request
 
-    def initialize(options)
-      @options = options
+    def initialize(args)
+      @args = args
     end
 
     def run
@@ -12,36 +12,40 @@ module Emites
 
     private
 
-    attr_reader :options
+    attr_reader :args
 
     def request
-      @request ||= Typhoeus::Request.new(options[:url], build_options)
+      @request ||= Typhoeus::Request.new(args[:url], options)
     end
 
-    def build_options
+    def options
       {
-        method:   options[:method],
-        userpwd:  "#{options[:token]}:x",
-        headers:  build_headers,
-        body:     build_body,
-        params:   options[:params],
+        method:   args[:method],
+        params:   args[:params],
+        body:     body,
+        headers:  headers,
+        userpwd:  token
       }.reject {|k,v| v.nil?}
     end
 
-    def build_headers
-      headers = options.fetch(:headers) { {} }
+    def headers
+      headers = args.fetch(:headers) { {} }
 
       {
         "Accept"        => "application/json",
         "Content-Type"  => "application/json",
-        "User-Agent"    => options[:user_agent]
+        "User-Agent"    => args[:user_agent]
       }.merge(headers)
     end
 
-    def build_body
-      body = options[:body]
+    def body
+      body = args[:body]
       body = MultiJson.dump(body) if body.is_a?(Hash)
       body
+    end
+
+    def token
+      "#{args[:token]}:x"
     end
 
   end

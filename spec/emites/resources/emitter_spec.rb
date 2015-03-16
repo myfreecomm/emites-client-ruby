@@ -33,9 +33,9 @@ describe Emites::Resources::Emitter do
 
     it "creates an emitter" do
       VCR.use_cassette("emitters/create/success") do
-        entity = subject.create(params)
-        expect(entity).to be_a(entity_klass)
-        expect(entity.cnpj).to eq(params[:cnpj])
+        emitter = subject.create(params)
+        expect(emitter).to be_a(entity_klass)
+        expect(emitter.cnpj).to eq(params[:cnpj])
       end
     end
 
@@ -51,9 +51,9 @@ describe Emites::Resources::Emitter do
   describe "#info" do
     it "returns an Emitter instance where id is 4" do
       VCR.use_cassette("emitters/info/success") do
-        entity = subject.info(4)
-        expect(entity).to be_a(entity_klass)
-        expect(entity.cnpj).to eq("17799377000155")
+        emitter = subject.info(4)
+        expect(emitter).to be_a(entity_klass)
+        expect(emitter.cnpj).to eq("17799377000155")
       end
     end
 
