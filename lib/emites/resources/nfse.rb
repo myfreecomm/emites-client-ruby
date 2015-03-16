@@ -31,6 +31,21 @@ module Emites
         end
       end
 
+      # Retrieves a Nfse by it's id
+      #
+      # [API]
+      #   Method: <tt>GET /api/v1/nfse/:id</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#detalhes
+      #
+      # @param id [Integer] the Nfse id
+      # @return [Emites::Entities::Nfse] the Nfse by it's id
+      def info(id)
+        http.get("/nfse/#{id}") do |response|
+          respond_with_entity(response)
+        end
+      end
+
     end
   end
 end

@@ -22,4 +22,15 @@ describe Emites::Resources::Nfse do
     end
   end
 
+  describe "#info" do
+    it "returns a Nfse instance where id is 456" do
+      VCR.use_cassette("nfse/info/success") do
+        nfse = subject.info(456)
+        expect(nfse).to be_a(entity_klass)
+        expect(nfse.serie). to eq("MYFC")
+        expect(nfse.taker).to be_a(Emites::Entities::Taker)
+      end
+    end
+  end
+
 end

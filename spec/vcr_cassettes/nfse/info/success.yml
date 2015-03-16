@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.emites.com.br/api/v1/nfse/456
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Allow:
+      - GET, DELETE, HEAD, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 16 Mar 2015 22:49:25 GMT
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Accept-Encoding
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2945'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJfbGlua3MiOiBbeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMu
+        Y29tLmJyL2FwaS92MS9uZnNlLzQ1NiIsICJtZXRob2QiOiAiR0VUIiwgInJl
+        bCI6ICJzZWxmIn0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRib3guZW1pdGVz
+        LmNvbS5ici9hcGkvdjEvbmZzZS80NTYiLCAibWV0aG9kIjogIkRFTEVURSIs
+        ICJyZWwiOiAiZGVzdHJveSJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94
+        LmVtaXRlcy5jb20uYnIvYXBpL3YxL25mc2UvNDU2L3N0YXR1cyIsICJtZXRo
+        b2QiOiAiR0VUIiwgInJlbCI6ICJzdGF0dXMifSwgeyJocmVmIjogImh0dHBz
+        Oi8vc2FuZGJveC5lbWl0ZXMuY29tLmJyL2FwaS92MS9uZnNlLzQ1Ni9jYW5j
+        ZWwiLCAibWV0aG9kIjogIlBPU1QiLCAicmVsIjogImNhbmNlbCJ9LCB7Imhy
+        ZWYiOiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIvYXBpL3YxL25m
+        c2UvNDU2L21pcnJvciIsICJtZXRob2QiOiAiR0VUIiwgInJlbCI6ICJtaXJy
+        b3IifSwgeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMuY29tLmJy
+        L2FwaS92MS9uZnNlLzQ1Ni94bWwiLCAibWV0aG9kIjogIkdFVCIsICJyZWwi
+        OiAieG1sIn0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRib3guZW1pdGVzLmNv
+        bS5ici9hcGkvdjEvbmZzZS80NTYvcGRmIiwgIm1ldGhvZCI6ICJHRVQiLCAi
+        cmVsIjogInBkZiJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRl
+        cy5jb20uYnIvYXBpL3YxL25mc2UvNDU2L2hpc3RvcnkiLCAibWV0aG9kIjog
+        IkdFVCIsICJyZWwiOiAiaGlzdG9yeSJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9z
+        YW5kYm94LmVtaXRlcy5jb20uYnIvbmZzZS9zaG93LzQ1NiIsICJtZXRob2Qi
+        OiAiR0VUIiwgInJlbCI6ICJodG1sIn1dLCAibmZzZV9lcnJvcnMiOiBbXSwg
+        InNlcnZpY2VfdmFsdWVzIjogeyJkZWR1Y3Rpb25fYW1vdW50IjogIjAuMDAi
+        LCAiZGlzY291bnRfY29uZGl0aW9uaW5nX2Ftb3VudCI6ICIwLjAwIiwgImNp
+        dHlfdGF4X2NvZGUiOiAiMDEwNTAxIiwgImNhbGN1bGF0aW9uX2Jhc2UiOiAi
+        MTAwMC4wMCIsICJzZXJ2aWNlX2Ftb3VudCI6ICIxMDAwLjAwIiwgInBpc19h
+        bW91bnQiOiAiMC4wMCIsICJvdGhlcl9yZXRlbnRpb25zIjogIjAuMDAiLCAi
+        aW5zc19hbW91bnQiOiAiMC4wMCIsICJyZXRhaW5lZF9pc3MiOiBmYWxzZSwg
+        Imlzc19wZXJjZW50YWdlIjogIjUuMDAiLCAiY3NsbF9hbW91bnQiOiAiMC4w
+        MCIsICJzZXJ2aWNlX2l0ZW1fY29kZSI6ICIwMTA1IiwgInJldGFpbmVkX2lz
+        c19hbW91bnQiOiBudWxsLCAibmZzZV9saXF1aWRfYW1vdW50IjogIjEwMDAu
+        MDAiLCAidW5jb25kaXRpb25lZF9kaXNjb3VudCI6ICIwLjAwIiwgImNvZmlu
+        c19hbW91bnQiOiAiMC4wMCIsICJpcl9hbW91bnQiOiAiMC4wMCIsICJpc3Nf
+        YW1vdW50IjogIjUwLjAwIiwgImNuYWVfY29kZSI6ICI2MjAxLTUvMDAiLCAi
+        Y2l0eV9jb2RlIjogMzMwNDU1NywgImRlc2NyaXB0aW9uIjogIk15RmluYW5j
+        ZSBTaWx2ZXIgQW51YWxcclxuUGVxdWVuYXMgZW1wcmVzYXMgcXVlIGJ1c2Nh
+        bSBnZXN0w6NvIGZpbmFuY2VpcmEgbmEgbWVkaWRhIGNlcnRhLlxyXG5EZXNj
+        b250byBwZWxvIGluY29udmVuaWVudGUgZG9zIHRlc3Rlc1xyXG5SZWZlcmVu
+        dGUgw6Agb3JkZW0gZGUgY29tcHJhIDIzOTkgY29tIHZlbmNpbWVudG8gZW0g
+        MDkvMDEvMjAxNyJ9LCAic3Vic3RpdHV0ZV9ycHMiOiBudWxsLCAiZW52aXJv
+        bm1lbnQiOiAic2FuZGJveCIsICJ0YWtlciI6IHsiY25waiI6ICIiLCAiZmFu
+        Y3lfbmFtZSI6ICIiLCAiY2l0eV9pbnNjcmlwdGlvbiI6ICIiLCAic3Vic3Rp
+        dHV0ZV9zdGF0ZV9pbnNjcmlwdGlvbiI6ICIiLCAiYWRkcmVzcyI6IHsibmVp
+        Z2hib3Job29kIjogIiIsICJjb3VudHJ5X2FiYnJldmlhdGlvbiI6ICJCUiIs
+        ICJyZWZlcmVuY2VfcG9pbnQiOiAiIiwgImNvbXBsZW1lbnQiOiAiIiwgIm51
+        bWJlciI6ICIiLCAibmVpZ2hib3Job29kX3R5cGUiOiAiUkVEIiwgInN0cmVl
+        dCI6ICIiLCAiY291bnRyeV9jb2RlIjogIjAxMDU4IiwgImNpdHkiOiAiIiwg
+        ImNvdW50cnkiOiAiQlIiLCAic3RhdGUiOiBudWxsLCAic3RyZWV0X3R5cGUi
+        OiAiUlVBIiwgImNpdHlfY29kZSI6IG51bGwsICJ6aXBfY29kZSI6ICIifSwg
+        InN0YXRlX2luc2NyaXB0aW9uIjogIiIsICJzb2NpYWxfcmVhc29uIjogIlZp
+        dG9yIE0uIEEuIGRhIENydXoiLCAiY3BmIjogIjgzOTE3ODczNTQwIiwgImNv
+        bnRhY3QiOiB7InBob25lIjogIiIsICJlbWFpbCI6ICIifSwgInNwZWNpYWxf
+        c2l0dWF0aW9uIjogbnVsbCwgImZvcmVpZ25fdGFrZXIiOiBmYWxzZX0sICJl
+        bWl0dGVyX2lkIjogNCwgImJhdGNoX2lkIjogbnVsbCwgIm1pcnJvcl91cmwi
+        OiBudWxsLCAieG1sX3VybCI6ICJodHRwczovL3NhbmRib3guZW1pdGVzLmNv
+        bS5ici9hcGkvdjEvbmZzZS80NTYveG1sIiwgInBkZl91cmwiOiAiaHR0cHM6
+        Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIvYXBpL3YxL25mc2UvNDU2L3BkZiIs
+        ICJpZCI6IDQ1NiwgInN0YXR1cyI6ICJhY2NlcHRlZCIsICJkZXNjcmlwdGlv
+        biI6ICJQcm9jZXNzYWRvIHBlbGEgU2VmYXoiLCAibmZzZV9rZXkiOiAiTkRM
+        WC1XRVZTIiwgIm5mc2VfbnVtYmVyIjogIjUyNyIsICJzZW5kX25mc2VfdGFr
+        ZXIiOiBmYWxzZSwgInByb3RvY29sIjogIiIsICJudW1iZXIiOiAxMCwgInNl
+        cmllIjogIk1ZRkMiLCAicnBzX3R5cGUiOiAxLCAiZW1pc3Npb25fZGF0ZSI6
+        ICIyMDE1LTAzLTA2VDE4OjU0OjAwWiIsICJvcGVyYXRpb25fbmF0dXJlIjog
+        MSwgInJwc19zaXR1YXRpb24iOiAxLCAib3RoZXJfaW5mb3JtYXRpb25zIjog
+        IiIsICJjb21wZXRlbmNlIjogbnVsbCwgInNwZWNpYWxfcmVnaW1lIjogbnVs
+        bCwgImVtaXR0ZXJfbmF0aW9uYWxfc2ltcGxlX29wdGFudCI6IGZhbHNlLCAi
+        ZW1pdHRlcl9jdWx0dXJhbF9wcm9tb3RlciI6IGZhbHNlLCAiaXNfYXBpIjog
+        ZmFsc2UsICJ1c2VyX2lkIjogM30=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/nfse/456
+  recorded_at: Mon, 16 Mar 2015 22:49:26 GMT
+recorded_with: VCR 2.9.3
