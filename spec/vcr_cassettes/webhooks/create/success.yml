@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.emites.com.br/api/v1/webhooks
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://requestb.in/1knsteq1","name":"My Fake Webhook"}'
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 16 Mar 2015 19:54:36 GMT
+      Location:
+      - https://sandbox.emites.com.br/api/v1/webhooks/16
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '525'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_links": [{"href": "https://sandbox.emites.com.br/api/v1/webhooks/16",
+        "method": "GET", "rel": "self"}, {"href": "https://sandbox.emites.com.br/api/v1/webhooks/16",
+        "method": "PUT", "rel": "update"}, {"href": "https://sandbox.emites.com.br/api/v1/webhooks/16",
+        "method": "PATCH", "rel": "partial_update"}, {"href": "https://sandbox.emites.com.br/api/v1/webhooks/16",
+        "method": "DELETE", "rel": "destroy"}], "id": 16, "name": "My Fake Webhook",
+        "url": "http://requestb.in/1knsteq1", "created_at": "2015-03-16T19:54:36.065Z"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/webhooks
+  recorded_at: Mon, 16 Mar 2015 19:54:36 GMT
+recorded_with: VCR 2.9.3

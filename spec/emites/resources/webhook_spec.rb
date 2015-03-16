@@ -41,4 +41,21 @@ describe Emites::Resources::Webhook do
     end
   end
 
+  describe "#create" do
+    let(:params) do
+      {
+        url:  "http://requestb.in/1knsteq1",
+        name: "My Fake Webhook"
+      }
+    end
+
+    it "creates an webhook" do
+      VCR.use_cassette("webhooks/create/success") do
+        entity = subject.create(params)
+        expect(entity).to be_a(entity_klass)
+        expect(entity.name).to eq(params[:name])
+      end
+    end
+  end
+
 end

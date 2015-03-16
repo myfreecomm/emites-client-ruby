@@ -63,6 +63,21 @@ module Emites
         end
       end
 
+      # Creates an Webhook
+      #
+      # [API]
+      #   Method: <tt>POST /api/v1/webhooks</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/webhooks.html#criacao
+      #
+      # @param params [Hash] a hash with Webhook attributes
+      # @return [Emites::Entities::Webhook] the created Webhook
+      def create(params)
+        http.post("/webhooks", { body: params }) do |response|
+          respond_with_entity(response)
+        end
+      end
+
     end
   end
 end
