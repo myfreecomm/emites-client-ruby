@@ -9,6 +9,8 @@ require "emites/client"
 require "emites/entities/base"
 require "emites/entities/emitter"
 require "emites/entities/webhook"
+require "emites/entities/taker_address"
+require "emites/entities/taker_contact"
 require "emites/entities/taker"
 
 require "emites/resources/base"
