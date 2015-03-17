@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.emites.com.br/api/v1/nfse/456/xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 302
+      message: FOUND
+    headers:
+      Allow:
+      - GET, HEAD, OPTIONS
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Tue, 17 Mar 2015 19:46:41 GMT
+      Location:
+      - https://emites-media-sandbox.s3.amazonaws.com/nfse/xmls/4/17799377000155/nfse_10.xml?Signature=lWkMAg2D1E%2FOdyLe%2FLwhMYr9zUE%3D&Expires=1426625201&AWSAccessKeyId=AKIAISRVLVSA5XJKPNTQ
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/nfse/456/xml
+  recorded_at: Tue, 17 Mar 2015 19:46:41 GMT
+recorded_with: VCR 2.9.3

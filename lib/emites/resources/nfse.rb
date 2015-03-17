@@ -76,6 +76,36 @@ module Emites
         end
       end
 
+      # Retrieves Nfse PDF url
+      #
+      # [API]
+      #   Method: <tt>GET /api/v1/nfse/:id/pdf</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#pdf
+      #
+      # @param id [Integer] the Nfse id
+      # @return [String] the url to redirect or an empty string if an error occurred
+      def pdf(id)
+        http.get("/nfse/#{id}/pdf") do |response|
+          response.headers.fetch("Location") { "" }
+        end
+      end
+
+      # Retrieves Nfse XML url
+      #
+      # [API]
+      #   Method: <tt>GET /api/v1/nfse/:id/xml</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#xml
+      #
+      # @param id [Integer] the Nfse id
+      # @return [String] the url to redirect or an empty string if an error occurred
+      def xml(id)
+        http.get("/nfse/#{id}/xml") do |response|
+          response.headers.fetch("Location") { "" }
+        end
+      end
+
     end
   end
 end

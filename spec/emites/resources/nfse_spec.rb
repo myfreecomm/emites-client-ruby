@@ -56,4 +56,24 @@ describe Emites::Resources::Nfse do
     end
   end
 
+  describe "#pdf" do
+    it "returns a Nfse pdf" do
+      VCR.use_cassette("nfse/pdf/success") do
+        pdf_url = subject.pdf(456)
+        expect(pdf_url).to be_a(String)
+        expect(pdf_url).to match(/https?/)
+      end
+    end
+  end
+
+  describe "#xml" do
+    it "returns a Nfse xml" do
+      VCR.use_cassette("nfse/xml/success") do
+        xml_url = subject.xml(456)
+        expect(xml_url).to be_a(String)
+        expect(xml_url).to match(/https?/)
+      end
+    end
+  end
+
 end
