@@ -121,7 +121,22 @@ module Emites
         end
       end
 
-      notify :cancel
+      # Deletes a Nfse by it's id
+      #
+      # [API]
+      #   Method: <tt>DELETE /api/v1/nfse/:id</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#remocao
+      #
+      # @param id [Integer] the Nfse id
+      # @return [Boolean] whether deletion was performed or not
+      def destroy(id)
+        http.delete("/nfse/#{id}") do |response|
+          response.code == 204
+        end
+      end
+
+      notify :cancel, :destroy
     end
   end
 end
