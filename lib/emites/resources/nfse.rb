@@ -46,7 +46,7 @@ module Emites
         end
       end
 
-      # Retrieves a NfseStatus by it's id
+      # Retrieves a Nfse status by it's id
       #
       # [API]
       #   Method: <tt>GET /api/v1/nfse/:id/status</tt>
@@ -58,6 +58,21 @@ module Emites
       def status(id)
         http.get("/nfse/#{id}/status") do |response|
           respond_with_entity(response, Entities::NfseStatus)
+        end
+      end
+
+      # Retrieves the entire Nfse status history by it's id
+      #
+      # [API]
+      #   Method: <tt>GET /api/v1/nfse/:id/history</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#historico
+      #
+      # @param id [Integer] the Nfse id
+      # @return [Array] an array of Emites::Entities::NfseStatusTransition
+      def history(id)
+        http.get("/nfse/#{id}/history") do |response|
+          respond_with_collection(response, Entities::NfseStatusTransition)
         end
       end
 

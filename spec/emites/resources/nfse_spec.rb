@@ -44,4 +44,16 @@ describe Emites::Resources::Nfse do
     end
   end
 
+  describe "#history" do
+    it "returns a Nfse instance status history" do
+      VCR.use_cassette("nfse/history/success") do
+        nfse_status_history = subject.history(456)
+        expect(nfse_status_history).to be_a(Array)
+        nfse_status_history.each do |e|
+          expect(e).to be_a(Emites::Entities::NfseStatusTransition)
+        end
+      end
+    end
+  end
+
 end

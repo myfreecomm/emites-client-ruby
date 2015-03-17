@@ -7,19 +7,21 @@ require "emites/http"
 require "emites/client"
 
 require "emites/entities/base"
+require "emites/entities/account"
 require "emites/entities/emitter"
-require "emites/entities/webhook"
 require "emites/entities/taker_address"
 require "emites/entities/taker_contact"
 require "emites/entities/taker"
+require "emites/entities/rps"
 require "emites/entities/nfse"
 require "emites/entities/nfse_status"
+require "emites/entities/nfse_status_transition"
+require "emites/entities/webhook"
 
 require "emites/resources/base"
 require "emites/resources/emitter"
 require "emites/resources/webhook"
 require "emites/resources/nfse"
-
 
 module Emites
   def self.configuration
