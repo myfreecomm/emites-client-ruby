@@ -20,11 +20,12 @@ module Emites
 
     def options
       {
-        method:   args[:method],
-        params:   args[:params],
-        body:     body,
-        headers:  headers,
-        userpwd:  token
+        method:           args[:method],
+        params:           args[:params],
+        body:             body,
+        headers:          headers,
+        userpwd:          token,
+        accept_encoding:  "gzip"
       }.reject {|k,v| v.nil?}
     end
 

@@ -26,6 +26,7 @@ describe Emites::Http do
         with("https://sandbox.emites.com.br/api/v1/some_resource",
              method: verb,
              userpwd: "#{token}:x",
+             accept_encoding: "gzip",
              headers:  {
                 "Accept"      => "application/json",
                 "Content-Type"  => "application/json",
