@@ -1,6 +1,11 @@
+require "emites/resources/hooks"
+
 module Emites
   module Resources
     class Base
+      include Wisper::Publisher
+      extend Hooks
+
       attr_accessor :http
 
       def initialize(http)
@@ -28,11 +33,11 @@ module Emites
       end
 
       def base_klass
-        @base_klass ||= self.class.name.split("::").last.to_sym
+        @base_klass ||= self.class.name.split("::").last
       end
 
       def entity_klass
-        @entity_klass ||= Emites::Entities.const_get(base_klass)
+        @entity_klass ||= Emites::Entities.const_get(base_klass.to_sym)
       end
 
     end

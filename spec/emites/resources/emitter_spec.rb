@@ -10,6 +10,8 @@ describe Emites::Resources::Emitter do
     expect(subject.http).to eq http
   end
 
+  it_behaves_like "bound_notifiers", [:create, :destroy]
+
   describe "#create" do
     let(:params) do
       {

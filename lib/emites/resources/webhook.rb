@@ -42,7 +42,7 @@ module Emites
       # @param params [Hash] a hash with new data
       # @return [Array] an array of Webhook
       def update(id, params)
-        http.put("/webhooks/#{id}", {body: params}) do |response|
+        http.put("/webhooks/#{id}", { body: params }) do |response|
           respond_with_entity(response)
         end
       end
@@ -78,6 +78,7 @@ module Emites
         end
       end
 
+      notify :create, :destroy, :update
     end
   end
 end

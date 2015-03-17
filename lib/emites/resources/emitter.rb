@@ -71,7 +71,7 @@ module Emites
       # @param params [Hash] a hash with Emitter attributes
       # @return [Array] an array of Emitter
       def search(params)
-        http.get("/emitters", {params: params}) do |response|
+        http.get("/emitters", { params: params }) do |response|
           respond_with_collection(response)
         end
       end
@@ -91,6 +91,8 @@ module Emites
           response.code == 204
         end
       end
+
+      notify :create, :destroy
     end
   end
 end

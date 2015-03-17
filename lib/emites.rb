@@ -1,5 +1,6 @@
 require "typhoeus"
 require "multi_json"
+require "wisper"
 
 require "emites/version"
 require "emites/configuration"
@@ -34,5 +35,9 @@ module Emites
 
   def self.client(token)
     Client.new(token)
+  end
+
+  def self.subscribe(event, callback)
+    Wisper.subscribe(callback, on: event, with: :call)
   end
 end

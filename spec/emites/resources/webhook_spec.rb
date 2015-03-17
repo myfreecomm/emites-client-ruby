@@ -10,6 +10,8 @@ describe Emites::Resources::Webhook do
     expect(subject.http).to eq http
   end
 
+  it_behaves_like "bound_notifiers", [:create, :update, :destroy]
+
   describe "#list" do
     it "returns an array of Webhooks" do
       VCR.use_cassette("webhooks/list/success") do
