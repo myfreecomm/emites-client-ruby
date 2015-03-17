@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.emites.com.br/api/v1/nfse/456/cancel
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 202
+      message: ACCEPTED
+    headers:
+      Allow:
+      - POST, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 17 Mar 2015 21:10:34 GMT
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '295'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id": 456, "status": "cancelling", "description": "Cancelamento aguardando
+        pela Sefaz", "nfse_key": "NDLX-WEVS", "nfse_number": "527", "number": 10,
+        "mirror_url": null, "xml_url": "https://sandbox.emites.com.br/api/v1/nfse/456/xml",
+        "pdf_url": null, "environment": "sandbox", "nfse_errors": []}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/nfse/456/cancel
+  recorded_at: Tue, 17 Mar 2015 21:10:34 GMT
+recorded_with: VCR 2.9.3

@@ -10,6 +10,8 @@ describe Emites::Resources::Nfse do
     expect(subject.http).to eq http
   end
 
+  it_behaves_like "bound_notifiers", [:cancel]
+
   describe "#list" do
     it "returns an array of Nfse" do
       VCR.use_cassette("nfse/list/success") do
@@ -72,6 +74,16 @@ describe Emites::Resources::Nfse do
         xml_url = subject.xml(456)
         expect(xml_url).to be_a(String)
         expect(xml_url).to match(/https?/)
+      end
+    end
+  end
+
+  describe "#cancel" do
+    it "cancel a Nfse" do
+      VCR.use_cassette("nfse/cancel/success") do
+        nfse = subject.cancel(456)
+        expect(nfse).to be_a(Emites::Entities::NfseStatus)
+        expect(nfse.status).to eq("cancelling")
       end
     end
   end

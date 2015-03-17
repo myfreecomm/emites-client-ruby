@@ -106,6 +106,22 @@ module Emites
         end
       end
 
+      # Cancels a Nfse by it's id
+      #
+      # [API]
+      #   Method: <tt>POST /api/v1/nfse/:id/cancel</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#cancelamento
+      #
+      # @param id [Integer] the Nfse id
+      # @return [Emites::Entities::NfseStatus] the NfseStatus by it's id
+      def cancel(id)
+        http.post("/nfse/#{id}/cancel") do |response|
+          respond_with_entity(response, Entities::NfseStatus)
+        end
+      end
+
+      notify :cancel
     end
   end
 end
