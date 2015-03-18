@@ -14,6 +14,6 @@ describe Emites::Entities::Nfse do
     :number, :rps_type, :emission_date,
     :operation_nature, :other_informations,
     :competence, :special_regime, :status,
-    :description, :send_nfse_taker
+    :description, :send_nfse_taker, :service_values
   ]
 end

@@ -1,4 +1,5 @@
 require "spec_helper"
+require "time"
 
 describe Emites::Resources::Nfse do
   let(:http)          { Emites::Http.new("7A75E575CFDEDB91FF7E2CE22089181A") }
@@ -93,6 +94,95 @@ describe Emites::Resources::Nfse do
       VCR.use_cassette("nfse/destroy/success") do
         result = subject.destroy(455)
         expect(result).to be_truthy
+      end
+    end
+  end
+
+  describe "#create" do
+    let(:params) do
+      {
+        emitter_id:         4,
+        rps_type:           1,
+        serie:              "a",
+        emission_date:      Time.now.utc.iso8601,
+        operation_nature:   1,
+        rps_situation:      1,
+        service_values:     {
+          service_amount:       1000.0,
+          deduction_amount:     0,
+          retained_iss:         false,
+          calculation_base:     1000.0,
+          iss_percentage:       5.00,
+          iss_amount:           50.0,
+          pis_amount:           0,
+          cofins_amount:        0,
+          inss_amount:          0,
+          ir_amount:            0,
+          csll_amount:          0,
+          service_item_code:    "0105",
+          city_tax_code:        "010501",
+          description:          "RSPEC Servicos de informatica",
+          city_code:            3304557,
+          nfse_liquid_amount:   1000.0,
+          discount_conditioning_amount: 0
+        },
+        taker:               {
+          cpf:                  "83051507121",
+          city_inscription:     "92708711",
+          social_reason:        "Tomador RSPEC",
+          address:      {
+            street:             "Feijó Júnior",
+            number:             "535",
+            neighborhood:       "São Pelegrino",
+            neighborhood_type:  "COM",
+            city_code:          4305108,
+            state:              "RS",
+            zip_code:           95110550,
+            city:               "Caxias do Sul"
+          },
+          contact:      {
+            phone:              "32272144",
+            ddd:                54
+          }
+        }
+      }
+    end
+
+    it "creates a completely new Nfse" do
+      VCR.use_cassette("nfse/create/success") do
+        nfse   = subject.create(params)
+        taker  = nfse.taker
+        values = nfse.service_values
+
+        expect(nfse).to be_a(entity_klass)
+
+        expect(taker).to be_a(Emites::Entities::Taker)
+        expect(taker.social_reason).to eq(params[:taker][:social_reason])
+
+        expect(values).to be_a(Emites::Entities::NfseValues)
+        expect(values.description).to eq(params[:service_values][:description])
+      end
+    end
+
+    it "creates a Nfse where taker already exists" do
+      VCR.use_cassette("nfse/create/given_taker") do
+        params.delete(:taker)
+        params[:taker_id] = 6
+
+        nfse = subject.create(params)
+
+        expect(nfse.taker).to be_a(Emites::Entities::Taker)
+        expect(nfse.taker.social_reason).to eq("Fulano de Tal")
+      end
+    end
+
+    it "creates a Nfse without a taker" do
+      VCR.use_cassette("nfse/create/without_taker") do
+        params.delete(:taker)
+
+        nfse = subject.create(params)
+
+        expect(nfse.taker).to be_nil
       end
     end
   end

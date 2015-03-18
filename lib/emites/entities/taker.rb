@@ -1,6 +1,7 @@
 module Emites
   module Entities
     class Taker < Base
+      attribute :id,                            Integer
       attribute :cpf,                           String
       attribute :cnpj,                          String
       attribute :city_inscription,              String

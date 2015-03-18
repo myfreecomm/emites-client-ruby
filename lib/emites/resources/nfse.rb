@@ -136,7 +136,22 @@ module Emites
         end
       end
 
-      notify :cancel, :destroy
+      # Creates an Nfse
+      #
+      # [API]
+      #   Method: <tt>POST /api/v1/nfse</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#criacao
+      #
+      # @param params [Hash] a hash with Nfse attributes
+      # @return [Emites::Entities::Nfse] the created Nfse
+      def create(params)
+        http.post("/nfse", { body: params }) do |response|
+          respond_with_entity(response)
+        end
+      end
+
+      notify :create, :cancel, :destroy
     end
   end
 end

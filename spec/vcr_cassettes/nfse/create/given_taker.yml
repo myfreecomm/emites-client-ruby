@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.emites.com.br/api/v1/nfse
+    body:
+      encoding: UTF-8
+      string: '{"emitter_id":4,"rps_type":1,"serie":"a","emission_date":"2015-03-18T15:37:54Z","operation_nature":1,"rps_situation":1,"service_values":{"service_amount":1000.0,"deduction_amount":0,"retained_iss":false,"calculation_base":1000.0,"iss_percentage":5.0,"iss_amount":50.0,"pis_amount":0,"cofins_amount":0,"inss_amount":0,"ir_amount":0,"csll_amount":0,"service_item_code":"0105","city_tax_code":"010501","description":"RSPEC
+        Servicos de informatica","city_code":3304557,"nfse_liquid_amount":1000.0,"discount_conditioning_amount":0},"taker_id":6}'
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 202
+      message: ACCEPTED
+    headers:
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 Mar 2015 15:37:57 GMT
+      Location:
+      - https://sandbox.emites.com.br/api/v1/nfse/531
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2770'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJfbGlua3MiOiBbeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMu
+        Y29tLmJyL2FwaS92MS9uZnNlLzUzMSIsICJtZXRob2QiOiAiR0VUIiwgInJl
+        bCI6ICJzZWxmIn0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRib3guZW1pdGVz
+        LmNvbS5ici9hcGkvdjEvbmZzZS81MzEiLCAibWV0aG9kIjogIkRFTEVURSIs
+        ICJyZWwiOiAiZGVzdHJveSJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94
+        LmVtaXRlcy5jb20uYnIvYXBpL3YxL25mc2UvNTMxL3N0YXR1cyIsICJtZXRo
+        b2QiOiAiR0VUIiwgInJlbCI6ICJzdGF0dXMifSwgeyJocmVmIjogImh0dHBz
+        Oi8vc2FuZGJveC5lbWl0ZXMuY29tLmJyL2FwaS92MS9uZnNlLzUzMS9jYW5j
+        ZWwiLCAibWV0aG9kIjogIlBPU1QiLCAicmVsIjogImNhbmNlbCJ9LCB7Imhy
+        ZWYiOiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIvYXBpL3YxL25m
+        c2UvNTMxL21pcnJvciIsICJtZXRob2QiOiAiR0VUIiwgInJlbCI6ICJtaXJy
+        b3IifSwgeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMuY29tLmJy
+        L2FwaS92MS9uZnNlLzUzMS94bWwiLCAibWV0aG9kIjogIkdFVCIsICJyZWwi
+        OiAieG1sIn0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRib3guZW1pdGVzLmNv
+        bS5ici9hcGkvdjEvbmZzZS81MzEvcGRmIiwgIm1ldGhvZCI6ICJHRVQiLCAi
+        cmVsIjogInBkZiJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRl
+        cy5jb20uYnIvYXBpL3YxL25mc2UvNTMxL2hpc3RvcnkiLCAibWV0aG9kIjog
+        IkdFVCIsICJyZWwiOiAiaGlzdG9yeSJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9z
+        YW5kYm94LmVtaXRlcy5jb20uYnIvbmZzZS9zaG93LzUzMSIsICJtZXRob2Qi
+        OiAiR0VUIiwgInJlbCI6ICJodG1sIn1dLCAibmZzZV9lcnJvcnMiOiBbXSwg
+        InNlcnZpY2VfdmFsdWVzIjogeyJkZWR1Y3Rpb25fYW1vdW50IjogIjAiLCAi
+        ZGlzY291bnRfY29uZGl0aW9uaW5nX2Ftb3VudCI6ICIwIiwgImNpdHlfdGF4
+        X2NvZGUiOiAiMDEwNTAxIiwgImNhbGN1bGF0aW9uX2Jhc2UiOiAiMTAwMC4w
+        MCIsICJzZXJ2aWNlX2Ftb3VudCI6ICIxMDAwLjAiLCAicGlzX2Ftb3VudCI6
+        ICIwIiwgIm90aGVyX3JldGVudGlvbnMiOiAiMCIsICJpbnNzX2Ftb3VudCI6
+        ICIwIiwgInJldGFpbmVkX2lzcyI6IGZhbHNlLCAiaXNzX3BlcmNlbnRhZ2Ui
+        OiAiNS4wIiwgImNzbGxfYW1vdW50IjogIjAiLCAic2VydmljZV9pdGVtX2Nv
+        ZGUiOiAiMDEwNSIsICJyZXRhaW5lZF9pc3NfYW1vdW50IjogbnVsbCwgIm5m
+        c2VfbGlxdWlkX2Ftb3VudCI6ICIxMDAwLjAwIiwgInVuY29uZGl0aW9uZWRf
+        ZGlzY291bnQiOiAiMCIsICJjb2ZpbnNfYW1vdW50IjogIjAiLCAiaXJfYW1v
+        dW50IjogIjAiLCAiaXNzX2Ftb3VudCI6ICI1MC4wIiwgImNuYWVfY29kZSI6
+        IG51bGwsICJjaXR5X2NvZGUiOiAzMzA0NTU3LCAiZGVzY3JpcHRpb24iOiAi
+        UlNQRUMgU2Vydmljb3MgZGUgaW5mb3JtYXRpY2EifSwgInN1YnN0aXR1dGVf
+        cnBzIjogbnVsbCwgImVudmlyb25tZW50IjogInNhbmRib3giLCAidGFrZXIi
+        OiB7ImNucGoiOiAiIiwgImZhbmN5X25hbWUiOiAiIiwgImNpdHlfaW5zY3Jp
+        cHRpb24iOiAiIiwgInN1YnN0aXR1dGVfc3RhdGVfaW5zY3JpcHRpb24iOiAi
+        IiwgImFkZHJlc3MiOiB7Im5laWdoYm9yaG9vZCI6ICJCb3RhZm9nbyIsICJj
+        b3VudHJ5X2FiYnJldmlhdGlvbiI6ICJCUiIsICJyZWZlcmVuY2VfcG9pbnQi
+        OiAiZW0gZnJlbnRlIMOgcXVlbGUgbHVnYXIiLCAiY29tcGxlbWVudCI6ICJH
+        IC8gMTkwMyIsICJudW1iZXIiOiAiOCIsICJuZWlnaGJvcmhvb2RfdHlwZSI6
+        ICJSRUQiLCAic3RyZWV0IjogIlJ1YSBHZW5lcmFsIEdvZXMgTW9udGVpcm8i
+        LCAiY291bnRyeV9jb2RlIjogIjAxMDU4IiwgImNpdHkiOiAiUmlvIGRlIEph
+        bmVpcm8iLCAiY291bnRyeSI6ICJCUiIsICJzdGF0ZSI6ICJSSiIsICJzdHJl
+        ZXRfdHlwZSI6ICJSVUEiLCAiY2l0eV9jb2RlIjogMzMwNDU1NywgInppcF9j
+        b2RlIjogIjIyMjkwMDgwIn0sICJzdGF0ZV9pbnNjcmlwdGlvbiI6ICIiLCAi
+        c29jaWFsX3JlYXNvbiI6ICJGdWxhbm8gZGUgVGFsIiwgImNwZiI6ICI2MzI0
+        MTcxMzEwNSIsICJjb250YWN0IjogeyJwaG9uZSI6ICIyMTk5OTk5ODg4OCIs
+        ICJlbWFpbCI6ICJmdWxhbm9AZXhlbXBsby5jb20ifSwgInNwZWNpYWxfc2l0
+        dWF0aW9uIjogMCwgImZvcmVpZ25fdGFrZXIiOiBmYWxzZX0sICJlbWl0dGVy
+        X2lkIjogNCwgImJhdGNoX2lkIjogbnVsbCwgIm1pcnJvcl91cmwiOiBudWxs
+        LCAieG1sX3VybCI6IG51bGwsICJwZGZfdXJsIjogbnVsbCwgImlkIjogNTMx
+        LCAic3RhdHVzIjogInNjaGVkdWxlZCIsICJkZXNjcmlwdGlvbiI6ICJBZ2Vu
+        ZGFkbyBvIHByb2Nlc3NhbWVudG8gZGEgTkZTZSIsICJuZnNlX2tleSI6IG51
+        bGwsICJuZnNlX251bWJlciI6IG51bGwsICJzZW5kX25mc2VfdGFrZXIiOiBm
+        YWxzZSwgInByb3RvY29sIjogbnVsbCwgIm51bWJlciI6IDIxMDM0NzM0NjUs
+        ICJzZXJpZSI6ICJhIiwgInJwc190eXBlIjogMSwgImVtaXNzaW9uX2RhdGUi
+        OiAiMjAxNS0wMy0xOFQxNTozNzo1NFoiLCAib3BlcmF0aW9uX25hdHVyZSI6
+        IDEsICJycHNfc2l0dWF0aW9uIjogMSwgIm90aGVyX2luZm9ybWF0aW9ucyI6
+        IG51bGwsICJjb21wZXRlbmNlIjogbnVsbCwgInNwZWNpYWxfcmVnaW1lIjog
+        bnVsbCwgImVtaXR0ZXJfbmF0aW9uYWxfc2ltcGxlX29wdGFudCI6IGZhbHNl
+        LCAiZW1pdHRlcl9jdWx0dXJhbF9wcm9tb3RlciI6IGZhbHNlLCAiaXNfYXBp
+        IjogdHJ1ZSwgInVzZXJfaWQiOiBudWxsfQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/nfse
+  recorded_at: Wed, 18 Mar 2015 15:37:57 GMT
+recorded_with: VCR 2.9.3

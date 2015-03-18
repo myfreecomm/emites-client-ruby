@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.emites.com.br/api/v1/nfse
+    body:
+      encoding: UTF-8
+      string: '{"emitter_id":4,"rps_type":1,"serie":"a","emission_date":"2015-03-18T15:41:40Z","operation_nature":1,"rps_situation":1,"service_values":{"service_amount":1000.0,"deduction_amount":0,"retained_iss":false,"calculation_base":1000.0,"iss_percentage":5.0,"iss_amount":50.0,"pis_amount":0,"cofins_amount":0,"inss_amount":0,"ir_amount":0,"csll_amount":0,"service_item_code":"0105","city_tax_code":"010501","description":"RSPEC
+        Servicos de informatica","city_code":3304557,"nfse_liquid_amount":1000.0,"discount_conditioning_amount":0}}'
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 202
+      message: ACCEPTED
+    headers:
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 Mar 2015 15:41:43 GMT
+      Location:
+      - https://sandbox.emites.com.br/api/v1/nfse/532
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2111'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_links": [{"href": "https://sandbox.emites.com.br/api/v1/nfse/532",
+        "method": "GET", "rel": "self"}, {"href": "https://sandbox.emites.com.br/api/v1/nfse/532",
+        "method": "DELETE", "rel": "destroy"}, {"href": "https://sandbox.emites.com.br/api/v1/nfse/532/status",
+        "method": "GET", "rel": "status"}, {"href": "https://sandbox.emites.com.br/api/v1/nfse/532/cancel",
+        "method": "POST", "rel": "cancel"}, {"href": "https://sandbox.emites.com.br/api/v1/nfse/532/mirror",
+        "method": "GET", "rel": "mirror"}, {"href": "https://sandbox.emites.com.br/api/v1/nfse/532/xml",
+        "method": "GET", "rel": "xml"}, {"href": "https://sandbox.emites.com.br/api/v1/nfse/532/pdf",
+        "method": "GET", "rel": "pdf"}, {"href": "https://sandbox.emites.com.br/api/v1/nfse/532/history",
+        "method": "GET", "rel": "history"}, {"href": "https://sandbox.emites.com.br/nfse/show/532",
+        "method": "GET", "rel": "html"}], "nfse_errors": [], "service_values": {"deduction_amount":
+        "0", "discount_conditioning_amount": "0", "city_tax_code": "010501", "calculation_base":
+        "1000.00", "service_amount": "1000.0", "pis_amount": "0", "other_retentions":
+        "0", "inss_amount": "0", "retained_iss": false, "iss_percentage": "5.0", "csll_amount":
+        "0", "service_item_code": "0105", "retained_iss_amount": null, "nfse_liquid_amount":
+        "1000.00", "unconditioned_discount": "0", "cofins_amount": "0", "ir_amount":
+        "0", "iss_amount": "50.0", "cnae_code": null, "city_code": 3304557, "description":
+        "RSPEC Servicos de informatica"}, "substitute_rps": null, "environment": "sandbox",
+        "taker": null, "emitter_id": 4, "batch_id": null, "mirror_url": null, "xml_url":
+        null, "pdf_url": null, "id": 532, "status": "scheduled", "description": "Agendado
+        o processamento da NFSe", "nfse_key": null, "nfse_number": null, "send_nfse_taker":
+        false, "protocol": null, "number": 2103473466, "serie": "a", "rps_type": 1,
+        "emission_date": "2015-03-18T15:41:40Z", "operation_nature": 1, "rps_situation":
+        1, "other_informations": null, "competence": null, "special_regime": null,
+        "emitter_national_simple_optant": false, "emitter_cultural_promoter": false,
+        "is_api": true, "user_id": null}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/nfse
+  recorded_at: Wed, 18 Mar 2015 15:41:43 GMT
+recorded_with: VCR 2.9.3

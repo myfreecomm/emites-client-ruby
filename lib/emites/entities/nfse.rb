@@ -15,6 +15,7 @@ module Emites
       attribute :status,              String
       attribute :description,         String
       attribute :send_nfse_taker,     Boolean
+      attribute :service_values,      NfseValues
     end
   end
 end
