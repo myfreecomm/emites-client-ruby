@@ -23,17 +23,17 @@ Or install it yourself as:
 
 ## Configuration
 
-1. Use Emites.configure to setup your environment:
+##### Use Emites.configure to setup your environment:
 
 ```ruby
-require "emiter"
+require "emites"
 
 Emites.configure do |config|
   config.url = "https://sandbox.emites.com.br/api/v1" # defaults to "https://app.emites.com.br/api/v1"
   config.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
 end
 ```
-2. Add a new token in Emites account at https://app.emites.com.br/config/api
+##### Create a new token in your Emites account: https://app.emites.com.br/config/api
 
 ## Usage
 
@@ -46,7 +46,7 @@ client = Emites.client("YOUR_TOKEN_HERE")
 ##### Now you have access to every API endpoint:
 
 * [Emitters API](http://myfreecomm.github.io/emites/sandbox/v1/modules/emitter.html) as `client.emitters`
-* [Webhooks API](http://myfreecomm.github.io/emites/sandbox/v1/modules/webhook.html) as `client.webhooks`
+* [Webhooks API](http://myfreecomm.github.io/emites/sandbox/v1/modules/webhooks.html) as `client.webhooks`
 * [NFSe API](http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html) as `client.nfse`
 
 ### Endpoints
@@ -55,64 +55,229 @@ client = Emites.client("YOUR_TOKEN_HERE")
 
 <table>
     <tr>
+        <th>HTTP method</th>
         <th>Endpoint</th>
         <th>Client method</th>
     </tr>
     <tr>
+        <td><code>POST</code></td>
         <td>
             <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/emitter.html#criacao" target="_blank">
-                POST /api/v1/emitters
+                /api/v1/emitters
             </a>
         </td>
         <td>
-            client.emitters.create
+            <code>client.emitters.create</code>
         </td>
     </tr>
     <tr>
-        <td>
-            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/emitter.html#detalhes" target="_blank">
-                GET /api/v1/emitters/:id
-            </a>
-        </td>
-        <td>
-            client.emitters.info
-        </td>
-    </tr>
-    <tr>
+        <td><code>GET</code></td>
         <td>
             <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/emitter.html#listagem" target="_blank">
-                GET /api/v1/emitters
+                /api/v1/emitters
             </a>
         </td>
         <td>
-            client.emitters.list
+            <code>client.emitters.list</code>
         </td>
     </tr>
     <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/emitter.html#detalhes" target="_blank">
+                /api/v1/emitters/:id
+            </a>
+        </td>
+        <td>
+            <code>client.emitters.info</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
         <td>
             <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/emitter.html#filtros" target="_blank">
-                GET /api/v1/emitters?cnpj=?cnpj
+                /api/v1/emitters?cnpj=?:cnpj
             </a>
         </td>
         <td>
-            client.emitters.search
+            <code>client.emitters.search</code>
         </td>
     </tr>
     <tr>
+        <td><code>DELETE</code></td>
         <td>
             <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/emitter.html#remocao" target="_blank">
-                DELETE /api/v1/emitters/:id
+                /api/v1/emitters/:id
             </a>
         </td>
         <td>
-            client.emitters.destroy
+            <code>client.emitters.destroy</code>
         </td>
     </tr>
 </table>
 
-#### [Webhooks](http://myfreecomm.github.io/emites/sandbox/v1/modules/webhook.html)
+#### [Webhooks](http://myfreecomm.github.io/emites/sandbox/v1/modules/webhooks.html)
+
+<table>
+    <tr>
+        <th>HTTP method</th>
+        <th>Endpoint</th>
+        <th>Client method</th>
+    </tr>
+    <tr>
+        <td><code>POST</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/webhooks.html#criacao" target="_blank">
+                /api/v1/webhooks
+            </a>
+        </td>
+        <td>
+            <code>client.webhooks.create</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/webhooks.html#listagem" target="_blank">
+                /api/v1/webhooks
+            </a>
+        </td>
+        <td>
+            <code>client.webhooks.list</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>PUT</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/webhooks.html#atualizacao" target="_blank">
+                /api/v1/webhooks/:id
+            </a>
+        </td>
+        <td>
+            <code>client.webhooks.update</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>DELETE</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/webhooks.html#remocao" target="_blank">
+                /api/v1/webhooks/:id
+            </a>
+        </td>
+        <td>
+            <code>client.webhooks.destroy</code>
+        </td>
+    </tr>
+</table>
 
 #### [NFSe](http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html)
+
+<table>
+    <tr>
+        <th>HTTP method</th>
+        <th>Endpoint</th>
+        <th>Client method</th>
+    </tr>
+    <tr>
+        <td><code>POST</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#criacao" target="_blank">
+                /api/v1/nfse
+            </a>
+        </td>
+        <td>
+            <code>client.nfse.create</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#listagem" target="_blank">
+                /api/v1/nfse
+            </a>
+        </td>
+        <td>
+            <code>client.nfse.list</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#detalhes" target="_blank">
+                /api/v1/nfse/:id
+            </a>
+        </td>
+        <td>
+            <code>client.nfse.info</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#status" target="_blank">
+                /api/v1/nfse/:id/status
+            </a>
+        </td>
+        <td>
+            <code>client.nfse.status</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#historico" target="_blank">
+                /api/v1/nfse/:id/history
+            </a>
+        </td>
+        <td>
+            <code>client.nfse.history</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#pdf" target="_blank">
+                /api/v1/nfse/:id/pdf
+            </a>
+        </td>
+        <td>
+            <code>client.nfse.pdf</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#xml" target="_blank">
+                /api/v1/nfse/:id/xml
+            </a>
+        </td>
+        <td>
+            <code>client.nfse.xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>POST</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#cancelamento" target="_blank">
+                /api/v1/nfse/:id/cancel
+            </a>
+        </td>
+        <td>
+            <code>client.nfse.cancel</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>DELETE</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#remocao" target="_blank">
+                /api/v1/nfse/:id
+            </a>
+        </td>
+        <td>
+            <code>client.nfse.destroy</code>
+        </td>
+    </tr>
+</table>
 
 ## Contributing
 
