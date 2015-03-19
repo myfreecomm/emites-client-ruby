@@ -1,6 +1,8 @@
+require "emites/exception"
+
 module Emites
-  RequestTimeout = Class.new(StandardError)
-  RequestError   = Class.new(StandardError)
+  RequestTimeout = Class.new(Exception)
+  RequestError   = Class.new(Exception)
 
   class Response < SimpleDelegator
 

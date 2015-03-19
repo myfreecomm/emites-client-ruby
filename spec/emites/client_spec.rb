@@ -1,8 +1,28 @@
 require "spec_helper"
 
 describe Emites::Client do
-  let(:token) { "3064F9B4DFFF2FA4287B5D42D7245F40" }
+  let(:token) { "7A75E575CFDEDB91FF7E2CE22089181A" }
   subject     { described_class.new(token) }
+
+  describe "#authenticated?" do
+    context "with a valid token" do
+      it "returns true" do
+        VCR.use_cassette("client/authenticated/true") do
+          expect(subject.authenticated?).to be_truthy
+        end
+      end
+    end
+
+    context "with an invalid token" do
+      subject { described_class.new("FAKE-TOKEN") }
+
+      it "returns false" do
+        VCR.use_cassette("client/authenticated/false") do
+          expect(subject.authenticated?).to be_falsey
+        end
+      end
+    end
+  end
 
   describe "#emitters" do
     it "returns an instance of Emites::Resources::Emitter" do

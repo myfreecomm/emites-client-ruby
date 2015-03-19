@@ -6,6 +6,15 @@ module Emites
       @http = Http.new(token)
     end
 
+    def authenticated?
+      http.get("") do |response|
+        response.code == 200
+      end
+    rescue RequestError => e
+      raise e unless e.code == 401
+      false
+    end
+
     def emitters
       Resources::Emitter.new(http)
     end
