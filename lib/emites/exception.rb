@@ -3,8 +3,9 @@ module Emites
     attr_accessor :code, :body
 
     def initialize(args = {})
-      @code = args[:code]
-      @body = args[:body]
+      super(args[:message])
+      @code     = args[:code]
+      @body     = args[:body]
     end
   end
 end
