@@ -3,6 +3,12 @@ require "spec_helper"
 describe Emites::Resources::Webhook do
   let(:http)          { Emites::Http.new("7A75E575CFDEDB91FF7E2CE22089181A") }
   let(:entity_klass)  { Emites::Entities::Webhook }
+  let(:params) do
+    {
+      url:  "http://requestb.in/1knsteq1",
+      name: "My Fake Webhook"
+    }
+  end
 
   subject { described_class.new(http) }
 
@@ -44,13 +50,6 @@ describe Emites::Resources::Webhook do
   end
 
   describe "#create" do
-    let(:params) do
-      {
-        url:  "http://requestb.in/1knsteq1",
-        name: "My Fake Webhook"
-      }
-    end
-
     it "creates an webhook" do
       VCR.use_cassette("webhooks/create/success") do
         webhook = subject.create(params)

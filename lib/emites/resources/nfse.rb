@@ -151,7 +151,23 @@ module Emites
         end
       end
 
-      notify :create, :cancel, :destroy
+      # Updates an Nfse
+      #
+      # [API]
+      #   Method: <tt>PUT /api/v1/:id</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#atualizacao-parcial-e-completa
+      #
+      # @param id [Integer] the Nfse id
+      # @param params [Hash] a hash with Nfse attributes
+      # @return [Emites::Entities::Nfse] the created Nfse
+      def update(id, params)
+        http.put("/nfse/#{id}", { body: params }) do |response|
+          respond_with_entity(response)
+        end
+      end
+
+      notify :create, :update, :cancel, :destroy
     end
   end
 end

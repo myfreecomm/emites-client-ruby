@@ -277,6 +277,17 @@ client = Emites.client("YOUR_TOKEN_HERE")
             <code>client.nfse.destroy</code>
         </td>
     </tr>
+    <tr>
+        <td><code>PUT</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#atualizacao-parcial-e-completa" target="_blank">
+                /api/v1/nfse/:id
+            </a>
+        </td>
+        <td>
+            <code>client.nfse.update</code>
+        </td>
+    </tr>
 </table>
 
 ## Contributing

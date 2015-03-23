@@ -4,6 +4,54 @@ require "time"
 describe Emites::Resources::Nfse do
   let(:http)          { Emites::Http.new("7A75E575CFDEDB91FF7E2CE22089181A") }
   let(:entity_klass)  { Emites::Entities::Nfse }
+  let(:params) do
+    {
+      emitter_id:         4,
+      rps_type:           1,
+      serie:              "a",
+      emission_date:      Time.now.utc.iso8601,
+      operation_nature:   1,
+      rps_situation:      1,
+      service_values:     {
+        service_amount:       1000.0,
+        deduction_amount:     0,
+        retained_iss:         false,
+        calculation_base:     1000.0,
+        iss_percentage:       5.00,
+        iss_amount:           50.0,
+        pis_amount:           0,
+        cofins_amount:        0,
+        inss_amount:          0,
+        ir_amount:            0,
+        csll_amount:          0,
+        service_item_code:    "0105",
+        city_tax_code:        "010501",
+        description:          "RSPEC Servicos de informatica",
+        city_code:            3304557,
+        nfse_liquid_amount:   1000.0,
+        discount_conditioning_amount: 0
+      },
+      taker:               {
+        cpf:                  "83051507121",
+        city_inscription:     "92708711",
+        social_reason:        "Tomador RSPEC",
+        address:      {
+          street:             "Feijó Júnior",
+          number:             "535",
+          neighborhood:       "São Pelegrino",
+          neighborhood_type:  "COM",
+          city_code:          4305108,
+          state:              "RS",
+          zip_code:           95110550,
+          city:               "Caxias do Sul"
+        },
+        contact:      {
+          phone:              "32272144",
+          ddd:                54
+        }
+      }
+    }
+  end
 
   subject { described_class.new(http) }
 
@@ -11,7 +59,7 @@ describe Emites::Resources::Nfse do
     expect(subject.http).to eq http
   end
 
-  it_behaves_like "bound_notifiers", [:cancel, :destroy]
+  it_behaves_like "bound_notifiers", [:create, :update, :cancel, :destroy]
 
   describe "#list" do
     it "returns an array of Nfse" do
@@ -99,55 +147,6 @@ describe Emites::Resources::Nfse do
   end
 
   describe "#create" do
-    let(:params) do
-      {
-        emitter_id:         4,
-        rps_type:           1,
-        serie:              "a",
-        emission_date:      Time.now.utc.iso8601,
-        operation_nature:   1,
-        rps_situation:      1,
-        service_values:     {
-          service_amount:       1000.0,
-          deduction_amount:     0,
-          retained_iss:         false,
-          calculation_base:     1000.0,
-          iss_percentage:       5.00,
-          iss_amount:           50.0,
-          pis_amount:           0,
-          cofins_amount:        0,
-          inss_amount:          0,
-          ir_amount:            0,
-          csll_amount:          0,
-          service_item_code:    "0105",
-          city_tax_code:        "010501",
-          description:          "RSPEC Servicos de informatica",
-          city_code:            3304557,
-          nfse_liquid_amount:   1000.0,
-          discount_conditioning_amount: 0
-        },
-        taker:               {
-          cpf:                  "83051507121",
-          city_inscription:     "92708711",
-          social_reason:        "Tomador RSPEC",
-          address:      {
-            street:             "Feijó Júnior",
-            number:             "535",
-            neighborhood:       "São Pelegrino",
-            neighborhood_type:  "COM",
-            city_code:          4305108,
-            state:              "RS",
-            zip_code:           95110550,
-            city:               "Caxias do Sul"
-          },
-          contact:      {
-            phone:              "32272144",
-            ddd:                54
-          }
-        }
-      }
-    end
-
     it "creates a completely new Nfse" do
       VCR.use_cassette("nfse/create/success") do
         nfse   = subject.create(params)
@@ -183,6 +182,31 @@ describe Emites::Resources::Nfse do
         nfse = subject.create(params)
 
         expect(nfse.taker).to be_nil
+      end
+    end
+
+    it "creates an incomplete Nfse" do
+      VCR.use_cassette("nfse/create/incomplete") do
+        params.delete(:taker)
+        params.delete(:service_values)
+        params[:allow_incomplete] = true
+
+        nfse = subject.create(params)
+
+        expect(nfse).to be_a(entity_klass)
+        expect(nfse.status).to eq("created")
+      end
+    end
+  end
+
+  describe "#update" do
+    it "updates a Nfse" do
+      VCR.use_cassette("nfse/update/success") do
+        nfse = subject.update(564, params)
+
+        expect(nfse).to be_a(entity_klass)
+        expect(nfse.status).to eq("scheduled")
+        expect(nfse.service_values.service_amount).to eq(1000.0)
       end
     end
   end

@@ -3,6 +3,25 @@ require "spec_helper"
 describe Emites::Resources::Emitter do
   let(:http)          { Emites::Http.new("7A75E575CFDEDB91FF7E2CE22089181A") }
   let(:entity_klass)  { Emites::Entities::Emitter }
+  let(:params) do
+    {
+      email:            "wanderson.policarpo@myfreecomm.com.br",
+      social_reason:    "My Fake, Inc",
+      cnpj:             "01001001000113",
+      fancy_name:       "My Fake",
+      city_inscription: "3304557",
+      state:            "RJ",
+      city:             "3",
+      neighborhood:     "Icaraí",
+      street_type:      "RUA",
+      street:           "Avenida Roberto Silveira - de 472 ao fim - lado par",
+      number:           43,
+      zip_code:         "24230-163",
+      phone:            "2199999999",
+      certificate:      Base64.encode64(File.read("spec/fixtures/certificate.pfx")),
+      password:         "123456"
+    }
+  end
 
   subject { described_class.new(http) }
 
@@ -13,26 +32,6 @@ describe Emites::Resources::Emitter do
   it_behaves_like "bound_notifiers", [:create, :destroy]
 
   describe "#create" do
-    let(:params) do
-      {
-        email:            "wanderson.policarpo@myfreecomm.com.br",
-        social_reason:    "My Fake, Inc",
-        cnpj:             "01001001000113",
-        fancy_name:       "My Fake",
-        city_inscription: "3304557",
-        state:            "RJ",
-        city:             "3",
-        neighborhood:     "Icaraí",
-        street_type:      "RUA",
-        street:           "Avenida Roberto Silveira - de 472 ao fim - lado par",
-        number:           43,
-        zip_code:         "24230-163",
-        phone:            "2199999999",
-        certificate:      Base64.encode64(File.read("spec/fixtures/certificate.pfx")),
-        password:         "123456"
-      }
-    end
-
     it "creates an emitter" do
       VCR.use_cassette("emitters/create/success") do
         emitter = subject.create(params)

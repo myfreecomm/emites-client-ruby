@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://sandbox.emites.com.br/api/v1/nfse
+    method: put
+    uri: https://sandbox.emites.com.br/api/v1/nfse/564
     body:
       encoding: UTF-8
-      string: '{"emitter_id":4,"rps_type":1,"serie":"a","emission_date":"2015-03-23T13:34:24Z","operation_nature":1,"rps_situation":1,"service_values":{"service_amount":1000.0,"deduction_amount":0,"retained_iss":false,"calculation_base":1000.0,"iss_percentage":5.0,"iss_amount":50.0,"pis_amount":0,"cofins_amount":0,"inss_amount":0,"ir_amount":0,"csll_amount":0,"service_item_code":"0105","city_tax_code":"010501","description":"RSPEC
+      string: '{"emitter_id":4,"rps_type":1,"serie":"a","emission_date":"2015-03-23T13:48:53Z","operation_nature":1,"rps_situation":1,"service_values":{"service_amount":1000.0,"deduction_amount":0,"retained_iss":false,"calculation_base":1000.0,"iss_percentage":5.0,"iss_amount":50.0,"pis_amount":0,"cofins_amount":0,"inss_amount":0,"ir_amount":0,"csll_amount":0,"service_item_code":"0105","city_tax_code":"010501","description":"RSPEC
         Servicos de informatica","city_code":3304557,"nfse_liquid_amount":1000.0,"discount_conditioning_amount":0},"taker":{"cpf":"83051507121","city_inscription":"92708711","social_reason":"Tomador
         RSPEC","address":{"street":"Feijó Júnior","number":"535","neighborhood":"São
         Pelegrino","neighborhood_type":"COM","city_code":4305108,"state":"RS","zip_code":95110550,"city":"Caxias
@@ -19,49 +19,50 @@ http_interactions:
       - application/json
   response:
     status:
-      code: 202
-      message: ACCEPTED
+      code: 200
+      message: OK
     headers:
       Allow:
-      - GET, POST, HEAD, OPTIONS
+      - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+      Content-Encoding:
+      - gzip
       Content-Type:
       - application/json
       Date:
-      - Mon, 23 Mar 2015 13:34:27 GMT
-      Location:
-      - https://sandbox.emites.com.br/api/v1/nfse/561
+      - Mon, 23 Mar 2015 13:48:56 GMT
       Server:
       - nginx/1.6.2
       User-Agent:
       - emites-sandbox-v1
       Vary:
+      - Accept-Encoding
       - Cookie
       X-Frame-Options:
       - SAMEORIGIN
       Content-Length:
-      - '2668'
+      - '1046'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJfbGlua3MiOiBbeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMu
-        Y29tLmJyL2FwaS92MS9uZnNlLzU2MSIsICJtZXRob2QiOiAiR0VUIiwgInJl
+        Y29tLmJyL2FwaS92MS9uZnNlLzU2NCIsICJtZXRob2QiOiAiR0VUIiwgInJl
         bCI6ICJzZWxmIn0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRib3guZW1pdGVz
-        LmNvbS5ici9hcGkvdjEvbmZzZS81NjEiLCAibWV0aG9kIjogIkRFTEVURSIs
+        LmNvbS5ici9hcGkvdjEvbmZzZS81NjQiLCAibWV0aG9kIjogIkRFTEVURSIs
         ICJyZWwiOiAiZGVzdHJveSJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94
-        LmVtaXRlcy5jb20uYnIvYXBpL3YxL25mc2UvNTYxL3N0YXR1cyIsICJtZXRo
+        LmVtaXRlcy5jb20uYnIvYXBpL3YxL25mc2UvNTY0L3N0YXR1cyIsICJtZXRo
         b2QiOiAiR0VUIiwgInJlbCI6ICJzdGF0dXMifSwgeyJocmVmIjogImh0dHBz
-        Oi8vc2FuZGJveC5lbWl0ZXMuY29tLmJyL2FwaS92MS9uZnNlLzU2MS9jYW5j
+        Oi8vc2FuZGJveC5lbWl0ZXMuY29tLmJyL2FwaS92MS9uZnNlLzU2NC9jYW5j
         ZWwiLCAibWV0aG9kIjogIlBPU1QiLCAicmVsIjogImNhbmNlbCJ9LCB7Imhy
         ZWYiOiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIvYXBpL3YxL25m
-        c2UvNTYxL3htbCIsICJtZXRob2QiOiAiR0VUIiwgInJlbCI6ICJ4bWwifSwg
+        c2UvNTY0L3htbCIsICJtZXRob2QiOiAiR0VUIiwgInJlbCI6ICJ4bWwifSwg
         eyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMuY29tLmJyL2FwaS92
-        MS9uZnNlLzU2MS9wZGYiLCAibWV0aG9kIjogIkdFVCIsICJyZWwiOiAicGRm
+        MS9uZnNlLzU2NC9wZGYiLCAibWV0aG9kIjogIkdFVCIsICJyZWwiOiAicGRm
         In0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRib3guZW1pdGVzLmNvbS5ici9h
-        cGkvdjEvbmZzZS81NjEvaGlzdG9yeSIsICJtZXRob2QiOiAiR0VUIiwgInJl
+        cGkvdjEvbmZzZS81NjQvaGlzdG9yeSIsICJtZXRob2QiOiAiR0VUIiwgInJl
         bCI6ICJoaXN0b3J5In0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRib3guZW1p
-        dGVzLmNvbS5ici9uZnNlL3Nob3cvNTYxIiwgIm1ldGhvZCI6ICJHRVQiLCAi
+        dGVzLmNvbS5ici9uZnNlL3Nob3cvNTY0IiwgIm1ldGhvZCI6ICJHRVQiLCAi
         cmVsIjogImh0bWwifV0sICJuZnNlX2Vycm9ycyI6IFtdLCAic2VydmljZV92
         YWx1ZXMiOiB7ImRlZHVjdGlvbl9hbW91bnQiOiAiMC4wMCIsICJkaXNjb3Vu
         dF9jb25kaXRpb25pbmdfYW1vdW50IjogIjAuMDAiLCAiY2l0eV90YXhfY29k
@@ -93,13 +94,13 @@ http_interactions:
         ICJlbWFpbCI6IG51bGx9LCAic3BlY2lhbF9zaXR1YXRpb24iOiBudWxsLCAi
         Zm9yZWlnbl90YWtlciI6IGZhbHNlfSwgImVtaXR0ZXJfaWQiOiA0LCAiYmF0
         Y2hfaWQiOiBudWxsLCAieG1sX3VybCI6IG51bGwsICJwZGZfdXJsIjogbnVs
-        bCwgImlkIjogNTYxLCAiaXNfY29tcGxldGUiOiB0cnVlLCAic3RhdHVzIjog
+        bCwgImlkIjogNTY0LCAiaXNfY29tcGxldGUiOiB0cnVlLCAic3RhdHVzIjog
         InNjaGVkdWxlZCIsICJkZXNjcmlwdGlvbiI6ICJBZ2VuZGFkbyBvIHByb2Nl
         c3NhbWVudG8gZGEgTkZTZSIsICJuZnNlX2tleSI6IG51bGwsICJuZnNlX251
         bWJlciI6IG51bGwsICJwcm90b2NvbCI6IG51bGwsICJzZW5kX25mc2VfdGFr
         ZXIiOiBmYWxzZSwgImlzX2FwaSI6IHRydWUsICJ1c2VyX2lkIjogbnVsbCwg
-        Im51bWJlciI6IDIxMDM0NzM0NjgsICJzZXJpZSI6ICJhIiwgInJwc190eXBl
-        IjogMSwgImVtaXNzaW9uX2RhdGUiOiAiMjAxNS0wMy0yM1QxMzozNDoyNFoi
+        Im51bWJlciI6IDIxMDM0NzM0NzEsICJzZXJpZSI6ICJhIiwgInJwc190eXBl
+        IjogMSwgImVtaXNzaW9uX2RhdGUiOiAiMjAxNS0wMy0yM1QxMzo0ODo1M1oi
         LCAib3BlcmF0aW9uX25hdHVyZSI6IDEsICJycHNfc2l0dWF0aW9uIjogMSwg
         Im90aGVyX2luZm9ybWF0aW9ucyI6IG51bGwsICJjb21wZXRlbmNlIjogbnVs
         bCwgInNwZWNpYWxfcmVnaW1lIjogbnVsbCwgImVtaXR0ZXJfbmF0aW9uYWxf
@@ -107,6 +108,6 @@ http_interactions:
         b3RlciI6IGZhbHNlfQ==
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.emites.com.br/api/v1/nfse
-  recorded_at: Mon, 23 Mar 2015 13:34:27 GMT
+      effective_url: https://sandbox.emites.com.br/api/v1/nfse/564
+  recorded_at: Mon, 23 Mar 2015 13:48:56 GMT
 recorded_with: VCR 2.9.3
