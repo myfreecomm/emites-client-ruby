@@ -1,10 +1,7 @@
 require "simplecov"
 require "codeclimate-test-reporter"
 
-unless ENV["SKIP_CODE_CLIMATE_TEST_REPORTER"] == "true"
-  CodeClimate::TestReporter.start
-end
-
+CodeClimate::TestReporter.start
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::HTMLFormatter
 ]
