@@ -290,6 +290,72 @@ client = Emites.client("YOUR_TOKEN_HERE")
     </tr>
 </table>
 
+## Callbacks
+
+All actions that change data triggers an event that you can subscribe to. This event allow you to extend the logic executed when you call a client method.
+
+#### Subscribing to an event
+
+All you have to do is create a class that responds to a method `#call` with two arguments:
+
+```ruby
+class MyListener
+  def call(result, args)
+  end
+end
+```
+
+**Where:**
+
+* `result` is the return of a client method
+* `args` is an array of arguments passed to the client method you called
+
+Now you have a listener, you can subscribe to an event:
+
+```ruby
+Emites.subscribe("emites.emitters.destroy", MyListener.new)
+```
+
+**Example:**
+
+When you call `client.emitters.destroy(1)`, an event `emites.emitters.destroy` will be triggered. Your listener method `#call` will receive:
+
+* `result` would be `true or false` - depending on what `client.emitters.destroy(1)` returned
+* `args` would be `[1]` - an array with the arguments passed to the client method
+
+#### Available hooks
+
+<table>
+    <tr>
+        <th>Resource</th>
+        <th>Events</th>
+    </tr>
+    <tr>
+        <td><code>emitters</code></td>
+        <td>
+          <code>emites.emitters.create</code><br />
+          <code>emites.emitters.destroy</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>webhooks</code></td>
+        <td>
+          <code>emites.webhooks.create</code><br />
+          <code>emites.webhooks.update</code><br />
+          <code>emites.webhooks.destroy</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>nfse</code></td>
+        <td>
+          <code>emites.nfse.create</code><br />
+          <code>emites.nfse.update</code><br />
+          <code>emites.nfse.destroy</code><br />
+          <code>emites.nfse.cancel</code>
+        </td>
+    </tr>
+</table>
+
 ## Contributing
 
 1. Fork it ( https://github.com/myfreecomm/emites-client-ruby/fork )
