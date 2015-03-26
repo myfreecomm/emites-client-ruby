@@ -9,5 +9,5 @@ describe Emites::Entities::TakerContact do
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:phone, :email]
+  it_behaves_like "entity_attributes", [:id, :phone, :email]
 end

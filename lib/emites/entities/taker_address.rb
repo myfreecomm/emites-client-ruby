@@ -1,6 +1,7 @@
 module Emites
   module Entities
     class TakerAddress < Base
+      attribute :id,                   Integer
       attribute :street,               String
       attribute :number,               String
       attribute :complement,           String

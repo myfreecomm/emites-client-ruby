@@ -1,6 +1,7 @@
 module Emites
   module Entities
     class NfseValues < Base
+      attribute :id,                             Integer
       attribute :service_amount,                 Decimal, precision: 16, scale: 2
       attribute :calculation_base,               Decimal, precision: 16, scale: 2
       attribute :deduction_amount,               Decimal, precision: 16, scale: 2

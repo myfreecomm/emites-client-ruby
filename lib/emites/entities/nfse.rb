@@ -1,6 +1,7 @@
 module Emites
   module Entities
     class Nfse < Base
+      attribute :id,                  Integer
       attribute :emitter_id,          Integer
       attribute :taker,               Taker
       attribute :rps_situation,       Integer

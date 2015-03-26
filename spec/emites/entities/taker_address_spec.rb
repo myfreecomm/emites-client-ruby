@@ -10,7 +10,7 @@ describe Emites::Entities::TakerAddress do
   subject { described_class.new(attributes) }
 
   it_behaves_like "entity_attributes", [
-    :street, :number, :complement, :neighborhood,
+    :id, :street, :number, :complement, :neighborhood,
     :city_code, :state, :zip_code, :street_type,
     :neighborhood_type, :city, :reference_point,
     :country, :country_code, :country_abbreviation
