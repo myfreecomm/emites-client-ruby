@@ -35,7 +35,7 @@ describe Emites::Http do
             )
     end
 
-    it "raise RequestTimeout when timed out" do
+    it "raises RequestTimeout when timed out" do
       response = Typhoeus::Response.new(return_code: :operation_timedout)
       Typhoeus.stub(/emites/).and_return(response)
       allow(Typhoeus::Request).to receive(:new).
@@ -44,7 +44,7 @@ describe Emites::Http do
       expect { subject.send(verb, "/some_resource") }.to raise_error(Emites::RequestTimeout)
     end
 
-    it 'resquests error' do
+    it "raises RequestError when an error occurred" do
       response = Typhoeus::Response.new(return_code: :ok, code: 500, body: "")
       Typhoeus.stub(/emites/).and_return(response)
       allow(Typhoeus::Request).to receive(:new).
