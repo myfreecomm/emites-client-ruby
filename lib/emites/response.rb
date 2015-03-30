@@ -30,7 +30,7 @@ module Emites
       raise RequestError.new(
         code:    code,
         message: status_message,
-        body:    body
+        body:    (MultiJson.load(body) rescue {})
       )
     end
 
