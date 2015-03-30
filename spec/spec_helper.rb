@@ -1,10 +1,7 @@
-require "simplecov"
 require "codeclimate-test-reporter"
+require "simplecov"
 
 CodeClimate::TestReporter.start
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter
-]
 
 SimpleCov.start do
   SimpleCov.maximum_coverage_drop 0.2
