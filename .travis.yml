@@ -3,6 +3,10 @@ rvm:
   - 2.0.0
   - 2.1.1
   - 2.2.0
-addons:
-  code_climate:
-    repo_token: 7fff8b37846c6d88cb3fc39331569e349820e5f1ed3c56a7197f858a5a5e36d1
+env:
+  global:
+    - FOO=bar
+    # CODECLIMATE_REPO_TOKEN
+    secure: "XUWWSpmCnhSVT7xNnPbcaL1N8PuUbQVAQDJkO6StWbBjb+BJXRUW331/Yp4ANod49KuEJWNnIhVFuotGFwNvi9ZKVCTM2bUhQF8qNKk4bpCrsrN1TZdbDgHo0ZzqTlaZy5uEDI1o4yP2XIEufNl+tybbNnFP23dFIp7hiBn4VTw="
+script:
+  - bundle exec rake --trace spec
