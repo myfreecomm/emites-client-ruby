@@ -7,8 +7,8 @@ require "emites/version"
 Gem::Specification.new do |spec|
   spec.name          = "emites-client"
   spec.version       = Emites::VERSION
-  spec.authors       = ["Leandro Thimóteo", "Rodrigo Tassinari", "Vagner Zampieri", "Wanderson Policarpo"]
-  spec.email         = %w(leandro.thimoteo rodrigo.tassinari vagner.zampieri wanderson.policarpo).map { |nick| "#{nick}@myfreecomm.com.br" }
+  spec.authors       = ["Leandro Thimóteo", "Marcos Tagomori", "Rodrigo Tassinari", "Vagner Zampieri", "Wanderson Policarpo"]
+  spec.email         = %w(leandro.thimoteo marcos.tagomori rodrigo.tassinari vagner.zampieri wanderson.policarpo).map { |nick| "#{nick}@myfreecomm.com.br" }
   spec.summary       = %q{Official Ruby client for the Emites API.}
   spec.description   = %q{Official Ruby client for the Emites API. Emites is a system for creating "notas fiscais eletrônicas" (NFe / NFSe) in Brazil.}
   spec.homepage      = "https://github.com/myfreecomm/emites-client-ruby"
