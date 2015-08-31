@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.emites.com.br/api/v1/takers
+    body:
+      encoding: UTF-8
+      string: '{"email":"email@example.com"}'
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: UNPROCESSABLE ENTITY
+    headers:
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Aug 2015 13:08:17 GMT
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '131'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjbnBqIjogWyJFc3RlIGNhbXBvIMOpIG9icmlnYXTDs3Jpby4iXSwgInNv
+        Y2lhbF9yZWFzb24iOiBbIkVzdGUgY2FtcG8gw6kgb2JyaWdhdMOzcmlvLiJd
+        LCAiY3BmIjogWyJFc3RlIGNhbXBvIMOpIG9icmlnYXTDs3Jpby4iXX0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/takers
+  recorded_at: Fri, 28 Aug 2015 13:08:17 GMT
+recorded_with: VCR 2.9.3

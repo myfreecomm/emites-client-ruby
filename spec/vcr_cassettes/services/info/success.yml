@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.emites.com.br/api/v1/service-values/50
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Allow:
+      - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Aug 2015 13:25:54 GMT
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Accept-Encoding
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '399'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJfbGlua3MiOiBbeyJocmVmIjogImh0dHBzOi8vc2FuZGJveC5lbWl0ZXMu
+        Y29tLmJyL2FwaS92MS9zZXJ2aWNlLXZhbHVlcy81MCIsICJtZXRob2QiOiAi
+        R0VUIiwgInJlbCI6ICJzZWxmIn0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRi
+        b3guZW1pdGVzLmNvbS5ici9hcGkvdjEvc2VydmljZS12YWx1ZXMvNTAiLCAi
+        bWV0aG9kIjogIlBVVCIsICJyZWwiOiAidXBkYXRlIn0sIHsiaHJlZiI6ICJo
+        dHRwczovL3NhbmRib3guZW1pdGVzLmNvbS5ici9hcGkvdjEvc2VydmljZS12
+        YWx1ZXMvNTAiLCAibWV0aG9kIjogIkRFTEVURSIsICJyZWwiOiAiZGVzdHJv
+        eSJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIv
+        c2VydmljZXMvZWRpdC81MCIsICJtZXRob2QiOiAiR0VUIiwgInJlbCI6ICJo
+        dG1sIn1dLCAiZW1pdHRlcl9pZCI6IDEwLCAiaWQiOiA1MCwgIm5hbWUiOiAi
+        U2VydmnDp29zIGRlIGluZm9ybcOhdGljYSIsICJjaXR5X2NvZGUiOiBudWxs
+        LCAiY2l0eV90YXhfY29kZSI6IG51bGwsICJzZXJ2aWNlX2l0ZW1fY29kZSI6
+        IG51bGwsICJjbmFlX2NvZGUiOiBudWxsLCAic2VydmljZV9hbW91bnQiOiAi
+        OTkuOTAiLCAiZGlzY291bnRfY29uZGl0aW9uaW5nX3BlcmNlbnRhZ2UiOiBu
+        dWxsLCAidW5jb25kaXRpb25lZF9kaXNjb3VudF9wZXJjZW50YWdlIjogbnVs
+        bCwgImRlZHVjdGlvbl9wZXJjZW50YWdlIjogbnVsbCwgIm90aGVyX3JldGVu
+        dGlvbnNfcGVyY2VudGFnZSI6IG51bGwsICJjYWxjdWxhdGlvbl9iYXNlIjog
+        bnVsbCwgImlzc19wZXJjZW50YWdlIjogbnVsbCwgInBpc19wZXJjZW50YWdl
+        IjogbnVsbCwgImNvZmluc19wZXJjZW50YWdlIjogbnVsbCwgImluc3NfcGVy
+        Y2VudGFnZSI6IG51bGwsICJpcl9wZXJjZW50YWdlIjogbnVsbCwgImNzbGxf
+        cGVyY2VudGFnZSI6IG51bGwsICJyZXRhaW5lZF9pc3MiOiBmYWxzZSwgInJl
+        dGFpbmVkX2lzc19wZXJjZW50YWdlIjogbnVsbCwgIm5mc2VfbGlxdWlkX2Ft
+        b3VudCI6IG51bGwsICJkZXNjcmlwdGlvbiI6IG51bGwsICJjaXR5X3RheF9j
+        b2RlX2Rlc2MiOiBudWxsLCAiY2l0eV9jb2RlX2Rlc2MiOiBudWxsLCAiY25h
+        ZV9jb2RlX2Rlc2MiOiBudWxsLCAic2VydmljZV9pdGVtX2NvZGVfZGVzYyI6
+        IG51bGx9
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/service-values/50
+  recorded_at: Fri, 28 Aug 2015 13:25:54 GMT
+recorded_with: VCR 2.9.3

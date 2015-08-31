@@ -42,4 +42,16 @@ describe Emites::Client do
     end
   end
 
+  describe "#takers" do
+    it "returns an instance of Emites::Resources::Taker" do
+      expect(subject.takers).to be_a(Emites::Resources::Taker)
+    end
+  end
+
+  describe "#services" do
+    it "returns an instance of Emites::Resources::Service" do
+      expect(subject.services).to be_a(Emites::Resources::Service)
+    end
+  end
+
 end

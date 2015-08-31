@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.emites.com.br/api/v1/takers
+    body:
+      encoding: UTF-8
+      string: '{"email":"wanderson.policarpo@myfreecomm.com.br","social_reason":"My
+        Fake, Inc","cnpj":"01001001000113","fancy_name":"My Fake","city_inscription":"3304557","state":"RJ","city":"3","neighborhood":"Icaraí","street_type":"RUA","street":"Avenida
+        Roberto Silveira - de 472 ao fim - lado par","number":43,"zip_code":"24230-163","phone":"2199999999"}'
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Aug 2015 13:05:46 GMT
+      Location:
+      - https://sandbox.emites.com.br/api/v1/takers/135
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '752'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"_links": [{"href": "https://sandbox.emites.com.br/api/v1/takers/135",
+        "method": "GET", "rel": "self"}, {"href": "https://sandbox.emites.com.br/api/v1/takers/135",
+        "method": "PUT", "rel": "update"}, {"href": "https://sandbox.emites.com.br/api/v1/takers/135",
+        "method": "PATCH", "rel": "partial_update"}, {"href": "https://sandbox.emites.com.br/api/v1/takers/135",
+        "method": "DELETE", "rel": "destroy"}], "address": null, "contact": null,
+        "id": 135, "account_id": 4, "is_complete": true, "cpf": null, "cnpj": "01001001000113",
+        "city_inscription": "3304557", "state_inscription": null, "social_reason":
+        "My Fake, Inc", "fancy_name": "My Fake", "substitute_state_inscription": null,
+        "special_situation": null, "foreign_taker": false, "person_type": null}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/takers
+  recorded_at: Fri, 28 Aug 2015 13:05:46 GMT
+recorded_with: VCR 2.9.3

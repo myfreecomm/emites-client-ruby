@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.emites.com.br/api/v1/service-values?name=Servi%C3%A7os%20de%20inform%C3%A1tica
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Aug 2015 13:27:46 GMT
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Accept-Encoding
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '431'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb3VudCI6IDEsICJuZXh0IjogbnVsbCwgInByZXZpb3VzIjogbnVsbCwg
+        ImNvbGxlY3Rpb24iOiBbeyJfbGlua3MiOiBbeyJocmVmIjogImh0dHBzOi8v
+        c2FuZGJveC5lbWl0ZXMuY29tLmJyL2FwaS92MS9zZXJ2aWNlLXZhbHVlcy81
+        MCIsICJtZXRob2QiOiAiR0VUIiwgInJlbCI6ICJzZWxmIn0sIHsiaHJlZiI6
+        ICJodHRwczovL3NhbmRib3guZW1pdGVzLmNvbS5ici9hcGkvdjEvc2Vydmlj
+        ZS12YWx1ZXMvNTAiLCAibWV0aG9kIjogIlBVVCIsICJyZWwiOiAidXBkYXRl
+        In0sIHsiaHJlZiI6ICJodHRwczovL3NhbmRib3guZW1pdGVzLmNvbS5ici9h
+        cGkvdjEvc2VydmljZS12YWx1ZXMvNTAiLCAibWV0aG9kIjogIkRFTEVURSIs
+        ICJyZWwiOiAiZGVzdHJveSJ9LCB7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94
+        LmVtaXRlcy5jb20uYnIvc2VydmljZXMvZWRpdC81MCIsICJtZXRob2QiOiAi
+        R0VUIiwgInJlbCI6ICJodG1sIn1dLCAiZW1pdHRlcl9pZCI6IDEwLCAiaWQi
+        OiA1MCwgIm5hbWUiOiAiU2VydmnDp29zIGRlIGluZm9ybcOhdGljYSIsICJj
+        aXR5X2NvZGUiOiBudWxsLCAiY2l0eV90YXhfY29kZSI6IG51bGwsICJzZXJ2
+        aWNlX2l0ZW1fY29kZSI6IG51bGwsICJjbmFlX2NvZGUiOiBudWxsLCAic2Vy
+        dmljZV9hbW91bnQiOiAiOTkuOTAiLCAiZGlzY291bnRfY29uZGl0aW9uaW5n
+        X3BlcmNlbnRhZ2UiOiBudWxsLCAidW5jb25kaXRpb25lZF9kaXNjb3VudF9w
+        ZXJjZW50YWdlIjogbnVsbCwgImRlZHVjdGlvbl9wZXJjZW50YWdlIjogbnVs
+        bCwgIm90aGVyX3JldGVudGlvbnNfcGVyY2VudGFnZSI6IG51bGwsICJjYWxj
+        dWxhdGlvbl9iYXNlIjogbnVsbCwgImlzc19wZXJjZW50YWdlIjogbnVsbCwg
+        InBpc19wZXJjZW50YWdlIjogbnVsbCwgImNvZmluc19wZXJjZW50YWdlIjog
+        bnVsbCwgImluc3NfcGVyY2VudGFnZSI6IG51bGwsICJpcl9wZXJjZW50YWdl
+        IjogbnVsbCwgImNzbGxfcGVyY2VudGFnZSI6IG51bGwsICJyZXRhaW5lZF9p
+        c3MiOiBmYWxzZSwgInJldGFpbmVkX2lzc19wZXJjZW50YWdlIjogbnVsbCwg
+        Im5mc2VfbGlxdWlkX2Ftb3VudCI6IG51bGwsICJkZXNjcmlwdGlvbiI6IG51
+        bGwsICJjaXR5X3RheF9jb2RlX2Rlc2MiOiBudWxsLCAiY2l0eV9jb2RlX2Rl
+        c2MiOiBudWxsLCAiY25hZV9jb2RlX2Rlc2MiOiBudWxsLCAic2VydmljZV9p
+        dGVtX2NvZGVfZGVzYyI6IG51bGx9XX0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/service-values?name=Servi%C3%A7os%20de%20inform%C3%A1tica
+  recorded_at: Fri, 28 Aug 2015 13:27:46 GMT
+recorded_with: VCR 2.9.3
