@@ -47,6 +47,8 @@ client = Emites.client("YOUR_TOKEN_HERE")
 ##### Now you have access to every API endpoint:
 
 * [Emitters API](http://myfreecomm.github.io/emites/sandbox/v1/modules/emitter.html) as `client.emitters`
+* [Takers API](http://myfreecomm.github.io/emites/sandbox/v1/modules/taker.html) as `client.takers`
+* [Services API](http://myfreecomm.github.io/emites/sandbox/v1/modules/service_values.html) as `client.services`
 * [Webhooks API](http://myfreecomm.github.io/emites/sandbox/v1/modules/webhooks.html) as `client.webhooks`
 * [NFSe API](http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html) as `client.nfse`
 
@@ -113,6 +115,136 @@ client = Emites.client("YOUR_TOKEN_HERE")
         </td>
         <td>
             <code>client.emitters.destroy</code>
+        </td>
+    </tr>
+</table>
+
+#### [Takers](http://myfreecomm.github.io/emites/sandbox/v1/modules/taker.html)
+
+<table>
+    <tr>
+        <th>HTTP method</th>
+        <th>Endpoint</th>
+        <th>Client method</th>
+    </tr>
+    <tr>
+        <td><code>POST</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/taker.html#criacao" target="_blank">
+                /api/v1/takers
+            </a>
+        </td>
+        <td>
+            <code>client.takers.create</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/taker.html#listagem" target="_blank">
+                /api/v1/takers
+            </a>
+        </td>
+        <td>
+            <code>client.takers.list</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/taker.html#detalhes" target="_blank">
+                /api/v1/takers/:id
+            </a>
+        </td>
+        <td>
+            <code>client.takers.info</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/taker.html#filtros" target="_blank">
+                /api/v1/takers?cnpj=:cnpj
+            </a>
+        </td>
+        <td>
+            <code>client.takers.search</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>DELETE</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/taker.html#remocao" target="_blank">
+                /api/v1/takers/:id
+            </a>
+        </td>
+        <td>
+            <code>client.takers.destroy</code>
+        </td>
+    </tr>
+</table>
+
+#### [Services](http://myfreecomm.github.io/emites/sandbox/v1/modules/service_values.html)
+
+<table>
+    <tr>
+        <th>HTTP method</th>
+        <th>Endpoint</th>
+        <th>Client method</th>
+    </tr>
+    <tr>
+        <td><code>POST</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/service_values.html#criacao" target="_blank">
+                /api/v1/service-values
+            </a>
+        </td>
+        <td>
+            <code>client.services.create</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/service_values.html#listagem" target="_blank">
+                /api/v1/service-values
+            </a>
+        </td>
+        <td>
+            <code>client.services.list</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/service_values.html#detalhes" target="_blank">
+                /api/v1/service-values/:id
+            </a>
+        </td>
+        <td>
+            <code>client.services.info</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>GET</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/service_values.html#filtros" target="_blank">
+                /api/v1/service-values?name=:name
+            </a>
+        </td>
+        <td>
+            <code>client.services.search</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>DELETE</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/service_values.html#remocao" target="_blank">
+                /api/v1/service-values/:id
+            </a>
+        </td>
+        <td>
+            <code>client.services.destroy</code>
         </td>
     </tr>
 </table>
@@ -336,6 +468,20 @@ When you call `client.emitters.destroy(1)`, an event `emites.emitters.destroy` w
         <td>
           <code>emites.emitters.create</code><br />
           <code>emites.emitters.destroy</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>takers</code></td>
+        <td>
+          <code>emites.takers.create</code><br />
+          <code>emites.takers.destroy</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>services</code></td>
+        <td>
+          <code>emites.services.create</code><br />
+          <code>emites.services.destroy</code>
         </td>
     </tr>
     <tr>
