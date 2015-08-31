@@ -26,5 +26,13 @@ module Emites
     def nfse
       Resources::Nfse.new(http)
     end
+
+    def takers
+      Resources::Taker.new(http)
+    end
+
+    def services
+      Resources::Service.new(http)
+    end
   end
 end

@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.emites.com.br/api/v1/service-values
+    body:
+      encoding: UTF-8
+      string: '{"service_amount":99.9}'
+    headers:
+      User-Agent:
+      - Emites Ruby Client v0.0.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: UNPROCESSABLE ENTITY
+    headers:
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Aug 2015 13:25:19 GMT
+      Server:
+      - nginx/1.6.2
+      User-Agent:
+      - emites-sandbox-v1
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '100'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlbWl0dGVyX2lkIjogWyJFc3RlIGNhbXBvIG7Do28gcG9kZSBlc3RhciB2
+        YXppby4iXSwgIm5hbWUiOiBbIkVzdGUgY2FtcG8gbsOjbyBwb2RlIGVzdGFy
+        IHZhemlvLiJdfQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.emites.com.br/api/v1/service-values
+  recorded_at: Fri, 28 Aug 2015 13:25:19 GMT
+recorded_with: VCR 2.9.3
