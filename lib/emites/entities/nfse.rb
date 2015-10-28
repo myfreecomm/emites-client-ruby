@@ -9,6 +9,7 @@ module Emites
       attribute :number,              Integer
       attribute :rps_type,            Integer
       attribute :emission_date,       DateTime
+      attribute :emission_date_nfse,  DateTime
       attribute :operation_nature,    Integer
       attribute :other_informations,  String
       attribute :competence,          Date
