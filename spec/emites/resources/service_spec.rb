@@ -104,4 +104,38 @@ describe Emites::Resources::Service do
       end
     end
   end
+
+  describe '#calculate_liquid_amount' do
+    it 'returns the liquid amount calculated based on service amount' do
+      VCR.use_cassette('services/calculate_liquid_amount/success') do
+        result = subject.calculate_liquid_amount(47, service_amount: 1000.0)
+
+        expect(result.liquid_amount).to eql 938.50
+      end
+    end
+
+    it 'returns error if service id is not found' do
+      VCR.use_cassette('services/calculate_liquid_amount/error') do
+        expect {
+          subject.calculate_liquid_amount(12, service_amount: 1000.0)
+        }.to raise_error(Emites::RequestError)
+      end
+    end
+
+    it "returns error if attribute isn't found" do
+      VCR.use_cassette('services/calculate_liquid_amount/attribute_error') do
+        expect {
+          subject.calculate_liquid_amount(47, service_value: 1000.0)
+        }.to raise_error(Emites::RequestError)
+      end
+    end
+
+    it "returns the same amount if taxes shouldn't be calculated" do
+      VCR.use_cassette('services/calculate_liquid_amount/lower_amount') do
+        result = subject.calculate_liquid_amount(47, service_amount: 100.0)
+
+        expect(result.liquid_amount).to eql 100.0
+      end
+    end
+  end
 end

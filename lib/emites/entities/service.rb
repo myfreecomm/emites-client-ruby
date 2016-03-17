@@ -21,6 +21,7 @@ module Emites
       attribute :description,                       String
       attribute :city_code,                         Integer
       attribute :nfse_liquid_amount,                Decimal, precision: 16, scale: 2
+      attribute :liquid_amount,                     Decimal, precision: 16, scale: 2
       attribute :other_retentions_percentage,       Decimal, precision: 5, scale: 2
       attribute :retained_iss_percentage,           Decimal, precision: 5, scale: 2
       attribute :unconditioned_discount_percentage, Decimal, precision: 5, scale: 2

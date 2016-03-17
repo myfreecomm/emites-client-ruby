@@ -16,6 +16,7 @@ describe Emites::Entities::Service do
     :ir_percentage, :csll_percentage, :discount_conditioning_percentage,
     :service_item_code, :city_tax_code, :cnae_code,
     :description, :city_code, :nfse_liquid_amount,
-    :other_retentions_percentage, :retained_iss_percentage, :unconditioned_discount_percentage
+    :liquid_amount, :other_retentions_percentage, :retained_iss_percentage,
+    :unconditioned_discount_percentage
   ]
 end
