@@ -40,8 +40,8 @@ end
 
 ##### Given your token, create an instance of Emites::Client, as below:
 
-```ruby 
-client = Emites.client("YOUR_TOKEN_HERE") 
+```ruby
+client = Emites.client("YOUR_TOKEN_HERE")
 ```
 
 ##### Now you have access to every API endpoint:
@@ -245,6 +245,17 @@ client = Emites.client("YOUR_TOKEN_HERE")
         </td>
         <td>
             <code>client.services.destroy</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>POST</code></td>
+        <td>
+            <a href="http://myfreecomm.github.io/emites/sandbox/v1/modules/service_values.html#calculo-de-valor-liquido-da-nfse" target="_blank">
+                /api/v1/service-values/:id/calculation-liquid-amount
+            </a>
+        </td>
+        <td>
+            <code>client.services.calculate_liquid_amount</code>
         </td>
     </tr>
 </table>

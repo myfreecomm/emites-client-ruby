@@ -92,6 +92,22 @@ module Emites
         end
       end
 
+      # Calculates the liquid amount based on service
+      #
+      # [API]
+      #   Method: <tt>POST /api/v1/service-values/:id/calculation-liquid-amount</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/service_values.html#calculo-de-valor-liquido-da-nfse
+      #
+      # @param id [Integer] the Service id
+      # @param params [Hash] a hash with Service service_amount
+      # @return [Emites::Entities::Service] the Service with calculated liquid amount
+      def calculate_liquid_amount(id, params)
+        http.post("/service-values/#{id}/calculation-liquid-amount", { body: params }) do |response|
+          respond_with_entity(response)
+        end
+      end
+
       notify :create, :destroy
     end
   end
