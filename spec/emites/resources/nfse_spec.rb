@@ -71,6 +71,18 @@ describe Emites::Resources::Nfse do
         end
       end
     end
+
+    it "filters nfse's by status" do
+      VCR.use_cassette("nfse/list/status/success") do
+        nfses = subject.list({ status: 'accepted' })
+        expect(nfses).to be_a(Emites::Entities::Collection)
+        expect(nfses.count).not_to be(0)
+        nfses.each do |e|
+          expect(e).to be_a(entity_klass)
+          expect(e.status).to eq('accepted')
+        end
+      end
+    end
   end
 
   describe "#info" do

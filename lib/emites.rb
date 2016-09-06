@@ -6,6 +6,7 @@ require "emites/version"
 require "emites/configuration"
 require "emites/http"
 require "emites/client"
+require "emites/params"
 
 require "emites/entities/base"
 require "emites/entities/collection"
