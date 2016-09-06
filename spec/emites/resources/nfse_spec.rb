@@ -65,7 +65,7 @@ describe Emites::Resources::Nfse do
     it "returns an array of Nfse" do
       VCR.use_cassette("nfse/list/success") do
         nfses = subject.list
-        expect(nfses).to be_a(Array)
+        expect(nfses).to be_a(Emites::Entities::Collection)
         nfses.each do |e|
           expect(e).to be_a(entity_klass)
         end
@@ -99,7 +99,7 @@ describe Emites::Resources::Nfse do
     it "returns a Nfse instance status history" do
       VCR.use_cassette("nfse/history/success") do
         nfse_status_history = subject.history(456)
-        expect(nfse_status_history).to be_a(Array)
+        expect(nfse_status_history).to be_a(Emites::Entities::Collection)
         nfse_status_history.each do |e|
           expect(e).to be_a(Emites::Entities::NfseStatusTransition)
         end

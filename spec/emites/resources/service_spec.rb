@@ -59,7 +59,7 @@ describe Emites::Resources::Service do
     it "returns an array of services" do
       VCR.use_cassette("services/list/success") do
         entities = subject.list
-        expect(entities).to be_a(Array)
+        expect(entities).to be_a(Emites::Entities::Collection)
         entities.each do |e|
           expect(e).to be_a(entity_klass)
         end
@@ -71,7 +71,7 @@ describe Emites::Resources::Service do
     it "returns an array of services where name is 'Serviços de informática'" do
       VCR.use_cassette("services/search/success") do
         entities = subject.search({ name: "Serviços de informática" })
-        expect(entities).to be_a(Array)
+        expect(entities).to be_a(Emites::Entities::Collection)
         expect(entities.count).to eq(1)
         entities.each do |e|
           expect(e).to be_a(entity_klass)
@@ -82,7 +82,7 @@ describe Emites::Resources::Service do
     it "returns empty" do
       VCR.use_cassette("services/search/returns_empty") do
         entities = subject.search({ name: "abc" })
-        expect(entities).to be_a(Array)
+        expect(entities).to be_a(Emites::Entities::Collection)
         expect(entities).to be_empty
       end
     end

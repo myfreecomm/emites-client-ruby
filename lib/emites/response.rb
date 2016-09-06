@@ -7,17 +7,22 @@ module Emites
   class Response < SimpleDelegator
 
     def resolve!(&block)
-      if success? || redirected?
+      timeout! if timed_out?
+      if(success? || redirected?)
         block_given? ? yield(self) : self
-      elsif timed_out?
-        timeout!
       else
         error!
       end
     end
 
     def redirected?
-      response_code && response_code >= 300 && response_code < 400
+      (300..308).include?(self.code)
+    end
+
+    def parsed_body
+      MultiJson.load(body)
+    rescue MultiJson::ParseError
+      {}
     end
 
     private
@@ -30,7 +35,7 @@ module Emites
       raise RequestError.new(
         code:    code,
         message: status_message,
-        body:    (MultiJson.load(body) rescue {})
+        body:    parsed_body
       )
     end
 

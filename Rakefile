@@ -7,3 +7,8 @@ begin
 rescue LoadError
   # no rspec available
 end
+
+desc 'Open an irb session preloaded with this library'
+task :console do
+  sh "irb -rubygems -I lib -r emites.rb"
+end

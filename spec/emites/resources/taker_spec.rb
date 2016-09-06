@@ -69,7 +69,7 @@ describe Emites::Resources::Taker do
     it "returns an array of takers" do
       VCR.use_cassette("takers/list/success") do
         entities = subject.list
-        expect(entities).to be_a(Array)
+        expect(entities).to be_a(Emites::Entities::Collection)
         entities.each do |e|
           expect(e).to be_a(entity_klass)
         end
@@ -81,7 +81,7 @@ describe Emites::Resources::Taker do
     it "returns an array of takers where CNPJ is '01001001000113'" do
       VCR.use_cassette("takers/search/success") do
         entities = subject.search({ cnpj: "01001001000113" })
-        expect(entities).to be_a(Array)
+        expect(entities).to be_a(Emites::Entities::Collection)
         expect(entities.count).to eq(1)
         entities.each do |e|
           expect(e).to be_a(entity_klass)
@@ -92,7 +92,7 @@ describe Emites::Resources::Taker do
     it "returns empty" do
       VCR.use_cassette("takers/search/returns_empty") do
         entities = subject.search({ cnpj: "1775" })
-        expect(entities).to be_a(Array)
+        expect(entities).to be_a(Emites::Entities::Collection)
         expect(entities).to be_empty
       end
     end

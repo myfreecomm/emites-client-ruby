@@ -8,6 +8,7 @@ require "emites/http"
 require "emites/client"
 
 require "emites/entities/base"
+require "emites/entities/collection"
 require "emites/entities/account"
 require "emites/entities/emitter"
 require "emites/entities/taker_address"
