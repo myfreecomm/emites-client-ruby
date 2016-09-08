@@ -50,5 +50,12 @@ describe Emites::Entities::Collection do
       expect(subject.total).to eq(1000)
     end
   end
+
+  describe "#to_a" do
+    it 'returns the collection as an array' do
+      expect(subject.to_a).to be_a(Array)
+      expect { subject.to_a.clear }.not_to change { subject.count }
+    end
+  end
 end
 

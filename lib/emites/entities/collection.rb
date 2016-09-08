@@ -7,7 +7,7 @@ module Emites
       PAGE_REGEX = /page=(\d+)/
 
       attr_reader :total
-      def_delegators :@collection, :first, :last, :each, :count, :empty?, :any?
+      def_delegators :@collection, :first, :last, :each, :map, :count, :empty?, :any?
 
       def initialize(response, entity_class)
         @response = response
@@ -31,6 +31,10 @@ module Emites
 
       def previous_page
         page_for('previous')
+      end
+
+      def to_a
+        @collection.clone
       end
 
       private
