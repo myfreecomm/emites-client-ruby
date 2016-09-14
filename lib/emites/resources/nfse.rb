@@ -25,7 +25,7 @@ module Emites
       #   Documentation: http://myfreecomm.github.io/emites/v1/modules/nfse.html#listagem
       #
       # @param params [Hash] an optional hash with filter parameters; see http://myfreecomm.github.io/emites/v1/modules/nfse.html#filtros
-      # @return [Array] an array of Webhook
+      # @return Emites::Entities::Collection a collection of Emites::Entities::Nfse
       def list(params = {})
         http.get("/nfse", params: filter(params)) do |response|
           respond_with_collection(response)
@@ -70,7 +70,7 @@ module Emites
       #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#historico
       #
       # @param id [Integer] the Nfse id
-      # @return [Array] an array of Emites::Entities::NfseStatusTransition
+      # @return Emites::Entities::Collection a collection of Emites::Entities::NfseStatusTransition
       def history(id)
         http.get("/nfse/#{id}/history") do |response|
           respond_with_collection(response, Entities::NfseStatusTransition)
@@ -186,7 +186,8 @@ module Emites
         taker_cpf
         taker_cnpj
         is_complete
-        serie
+        serie,
+        page
       )
 
       def filter(params)
