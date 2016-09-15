@@ -7,6 +7,7 @@ module Emites
       attribute :rps_situation,       Integer
       attribute :serie,               String
       attribute :number,              Integer
+      attribute :nfse_number,         Integer
       attribute :rps_type,            Integer
       attribute :emission_date,       DateTime
       attribute :emission_date_nfse,  DateTime

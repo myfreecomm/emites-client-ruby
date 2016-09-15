@@ -128,7 +128,7 @@ describe Emites::Entities::Nfse do
 
   it_behaves_like "entity_attributes", [
     :id, :emitter_id, :taker, :rps_situation, :serie,
-    :number, :rps_type, :emission_date,
+    :number, :nfse_number, :rps_type, :emission_date,
     :emission_date_nfse, :operation_nature, :other_informations,
     :competence, :special_regime, :status,
     :description, :send_nfse_taker, :service_values,
