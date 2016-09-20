@@ -132,7 +132,7 @@ describe Emites::Entities::Nfse do
     :emission_date_nfse, :operation_nature, :other_informations,
     :competence, :special_regime, :status,
     :description, :send_nfse_taker, :service_values,
-    :_links
+    :created_at, :updated_at, :_links
   ]
 
   describe "#url" do
