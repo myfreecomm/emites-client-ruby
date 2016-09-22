@@ -71,10 +71,12 @@ describe Emites::Resources::Nfse do
         end
       end
     end
+  end
 
+  describe "#search" do
     it "filters nfse's by status" do
-      VCR.use_cassette("nfse/list/status/success") do
-        nfses = subject.list({ status: 'accepted' })
+      VCR.use_cassette("nfse/search/success") do
+        nfses = subject.search({ status: 'accepted' })
         expect(nfses).to be_a(Emites::Entities::Collection)
         expect(nfses.count).not_to be(0)
         nfses.each do |e|

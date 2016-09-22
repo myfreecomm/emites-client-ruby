@@ -24,9 +24,23 @@ module Emites
       #
       #   Documentation: http://myfreecomm.github.io/emites/v1/modules/nfse.html#listagem
       #
-      # @param params [Hash] an optional hash with filter parameters; see http://myfreecomm.github.io/emites/v1/modules/nfse.html#filtros
       # @return Emites::Entities::Collection a collection of Emites::Entities::Nfse
-      def list(params = {})
+      def list
+        http.get("/nfse") do |response|
+          respond_with_collection(response)
+        end
+      end
+
+      # Lists all NFSes matching search parameters
+      #
+      # [API]
+      #   Method: <tt>GET /api/v1/nfse?status=:status&page=:page</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/v1/modules/nfse.html#filtros
+      #
+      # @param params [Hash] an optional hash with filter parameters
+      # @return Emites::Entities::Collection a collection of Emites::Entities::Nfse
+      def search(params = {})
         http.get("/nfse", params: filter(params)) do |response|
           respond_with_collection(response)
         end

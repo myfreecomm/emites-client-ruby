@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 06 Sep 2016 19:56:16 GMT
+      - Thu, 22 Sep 2016 01:47:27 GMT
       Server:
       - nginx/1.8.1
       User-Agent:
@@ -42,7 +42,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJjb3VudCI6IDIxMzksICJuZXh0IjogImh0dHBzOi8vc2FuZGJveC5lbWl0
+        eyJjb3VudCI6IDIzMjgsICJuZXh0IjogImh0dHBzOi8vc2FuZGJveC5lbWl0
         ZXMuY29tLmJyL2FwaS92MS9uZnNlP3N0YXR1cz1hY2NlcHRlZCZwYWdlPTIi
         LCAicHJldmlvdXMiOiBudWxsLCAiY29sbGVjdGlvbiI6IFt7Il9saW5rcyI6
         IFt7ImhyZWYiOiAiaHR0cHM6Ly9zYW5kYm94LmVtaXRlcy5jb20uYnIvYXBp
@@ -1504,5 +1504,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.emites.com.br/api/v1/nfse?status=accepted
-  recorded_at: Tue, 06 Sep 2016 19:56:15 GMT
+  recorded_at: Thu, 22 Sep 2016 01:47:23 GMT
 recorded_with: VCR 2.9.3
