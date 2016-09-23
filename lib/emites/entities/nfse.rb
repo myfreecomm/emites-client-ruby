@@ -20,8 +20,6 @@ module Emites
       attribute :send_nfse_taker,     Boolean
       attribute :service_values,      NfseValues
       attribute :_links,              Array
-      attribute :created_at,          DateTime
-      attribute :updated_at,          DateTime
 
       def url(action)
         links = self._links || []
