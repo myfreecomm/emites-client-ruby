@@ -1,0 +1,424 @@
+{
+  "count": 1000,
+  "next": "https://sandbox.emites.com.br/api/v1/nfse?emitter_id=4&status=accepted&page=3",
+  "previous": "https://sandbox.emites.com.br/api/v1/nfse?emitter_id=4&status=accepted&page=1",
+  "collection": [
+    {
+      "_links": [
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1836",
+          "method": "GET",
+          "rel": "self"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1836",
+          "method": "DELETE",
+          "rel": "destroy"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1836/status",
+          "method": "GET",
+          "rel": "status"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1836/cancel",
+          "method": "POST",
+          "rel": "cancel"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1836/xml",
+          "method": "GET",
+          "rel": "xml"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1836/pdf",
+          "method": "GET",
+          "rel": "pdf"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1836/history",
+          "method": "GET",
+          "rel": "history"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/nfse/show/1836",
+          "method": "GET",
+          "rel": "html"
+        }
+      ],
+      "nfse_errors": [],
+      "service_values": {
+        "city_tax_code": "010501",
+        "service_amount": "100.00",
+        "pis_amount": "0.65",
+        "inss_amount": "0.00",
+        "nfse_liquid_amount": "93.85",
+        "iss_amount": "5.00",
+        "cnae_code": null,
+        "deduction_amount": "0.00",
+        "retained_iss_amount": null,
+        "tax_burden_amount": null,
+        "unconditioned_discount": "0.00",
+        "tax_burden_source": null,
+        "city_code": 3304557,
+        "tax_burden_percentage": null,
+        "description": "OK",
+        "ir_amount": "1.50",
+        "other_retentions": "0.00",
+        "discount_conditioning_amount": "0.00",
+        "iss_percentage": "5.00",
+        "calculation_base": "100.00",
+        "csll_amount": "1.00",
+        "retained_iss": false,
+        "service_item_code": "0105",
+        "cofins_amount": "3.00"
+      },
+      "substitute_rps": null,
+      "environment": "sandbox",
+      "taker": {
+        "cnpj": "45349838000123",
+        "fancy_name": null,
+        "city_inscription": null,
+        "substitute_state_inscription": null,
+        "address": {
+          "neighborhood": "Sé",
+          "country_abbreviation": "BR",
+          "reference_point": null,
+          "complement": "Igreja",
+          "number": "12",
+          "neighborhood_type": null,
+          "street": "Praça da Sé",
+          "country_code": "01058",
+          "city": "São Paulo",
+          "country": "BR",
+          "state": "SP",
+          "street_type": null,
+          "city_code": 3550308,
+          "zip_code": "01001000"
+        },
+        "state_inscription": null,
+        "social_reason": "A Empresa com Endereço ",
+        "cpf": null,
+        "contact": {
+          "phone": "",
+          "email": null
+        },
+        "special_situation": null,
+        "foreign_taker": false
+      },
+      "emitter_id": 4,
+      "batch_id": null,
+      "service_values_rps_operation": null,
+      "service_values_rps_taxation": null,
+      "service_values_tipo_recolhimento": null,
+      "service_values_highlight_retentions": null,
+      "xml_url": "https://sandbox.emites.com.br/api/v1/nfse/1836/xml",
+      "pdf_url": "https://sandbox.emites.com.br/api/v1/nfse/1836/pdf",
+      "rps_situation": "1",
+      "operation_nature": "1",
+      "special_regime": null,
+      "rps_type": "1",
+      "serie": "6",
+      "id": 1836,
+      "is_complete": true,
+      "allow_incomplete": false,
+      "status": "accepted",
+      "description": "Processado pela Sefaz",
+      "nfse_key": "MYNF-B34Y",
+      "nfse_number": 1454,
+      "protocol": null,
+      "send_nfse_taker": false,
+      "is_api": true,
+      "user_id": null,
+      "pdf_emissor": null,
+      "number": 530,
+      "emission_date": "2015-12-14T10:47:00",
+      "emission_date_nfse": "2015-12-14T10:47:49",
+      "other_informations": "Criado pelo Billimatic, contrato CONTRATO, faturamento #4744.",
+      "competence": "2015-12-14T10:47:00",
+      "emitter_national_simple_optant": false,
+      "emitter_cultural_promoter": false,
+      "service_values_item_description": null,
+      "service_values_tax_burden_highlight": false,
+      "already_added": false
+    },
+    {
+      "_links": [
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1107",
+          "method": "GET",
+          "rel": "self"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1107",
+          "method": "DELETE",
+          "rel": "destroy"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1107/status",
+          "method": "GET",
+          "rel": "status"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1107/cancel",
+          "method": "POST",
+          "rel": "cancel"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1107/xml",
+          "method": "GET",
+          "rel": "xml"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1107/pdf",
+          "method": "GET",
+          "rel": "pdf"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/1107/history",
+          "method": "GET",
+          "rel": "history"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/nfse/show/1107",
+          "method": "GET",
+          "rel": "html"
+        }
+      ],
+      "nfse_errors": [],
+      "service_values": {
+        "city_tax_code": "010501",
+        "service_amount": "3500.00",
+        "pis_amount": "22.75",
+        "inss_amount": "0.00",
+        "nfse_liquid_amount": "3284.75",
+        "iss_amount": "175.00",
+        "cnae_code": null,
+        "deduction_amount": "0.00",
+        "retained_iss_amount": null,
+        "tax_burden_amount": null,
+        "unconditioned_discount": "0.00",
+        "tax_burden_source": null,
+        "city_code": 3304557,
+        "tax_burden_percentage": null,
+        "description": "ALuguel do rexpense",
+        "ir_amount": "52.50",
+        "other_retentions": "0.00",
+        "discount_conditioning_amount": "0.00",
+        "iss_percentage": "5.00",
+        "calculation_base": "3500.00",
+        "csll_amount": "35.00",
+        "retained_iss": false,
+        "service_item_code": "0105",
+        "cofins_amount": "105.00"
+      },
+      "substitute_rps": null,
+      "environment": "sandbox",
+      "taker": {
+        "cnpj": "58153377000160",
+        "fancy_name": "ACME",
+        "city_inscription": "lalal",
+        "substitute_state_inscription": "opa oapo poapo ",
+        "address": {
+          "neighborhood": "Ipanema",
+          "country_abbreviation": "BR",
+          "reference_point": "",
+          "complement": "apto 898989",
+          "number": "213",
+          "neighborhood_type": "RED",
+          "street": "Rua Barão da Torre",
+          "country_code": "01058",
+          "city": "Rio de Janeiro",
+          "country": "BR",
+          "state": "RJ",
+          "street_type": "RUA",
+          "city_code": 3304557,
+          "zip_code": "22411001"
+        },
+        "state_inscription": "ISENTO",
+        "social_reason": "Acme Inc.",
+        "cpf": "",
+        "contact": {
+          "phone": "21212121212",
+          "email": ""
+        },
+        "special_situation": 0,
+        "foreign_taker": false
+      },
+      "emitter_id": 4,
+      "batch_id": null,
+      "service_values_rps_operation": null,
+      "service_values_rps_taxation": null,
+      "service_values_tipo_recolhimento": null,
+      "service_values_highlight_retentions": null,
+      "xml_url": "https://sandbox.emites.com.br/api/v1/nfse/1107/xml",
+      "pdf_url": "https://sandbox.emites.com.br/api/v1/nfse/1107/pdf",
+      "rps_situation": "1",
+      "operation_nature": "1",
+      "special_regime": null,
+      "rps_type": "1",
+      "serie": "3",
+      "id": 1107,
+      "is_complete": true,
+      "allow_incomplete": false,
+      "status": "accepted",
+      "description": "Processado pela Sefaz",
+      "nfse_key": "GBZK-4YZM",
+      "nfse_number": 2859,
+      "protocol": null,
+      "send_nfse_taker": false,
+      "is_api": true,
+      "user_id": null,
+      "pdf_emissor": null,
+      "number": 39,
+      "emission_date": "2015-10-19T15:53:00",
+      "emission_date_nfse": "2015-10-19T17:53:21",
+      "other_informations": "Criado pelo Dom Contrato, contrato Aluguel do Rexpense para ACME Inc., faturamento #3859.",
+      "competence": "2015-10-19T15:53:00",
+      "emitter_national_simple_optant": false,
+      "emitter_cultural_promoter": false,
+      "service_values_item_description": null,
+      "service_values_tax_burden_highlight": false,
+      "already_added": false
+    },
+    {
+      "_links": [
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/963",
+          "method": "GET",
+          "rel": "self"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/963",
+          "method": "DELETE",
+          "rel": "destroy"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/963/status",
+          "method": "GET",
+          "rel": "status"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/963/cancel",
+          "method": "POST",
+          "rel": "cancel"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/963/xml",
+          "method": "GET",
+          "rel": "xml"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/963/pdf",
+          "method": "GET",
+          "rel": "pdf"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/api/v1/nfse/963/history",
+          "method": "GET",
+          "rel": "history"
+        },
+        {
+          "href": "https://sandbox.emites.com.br/nfse/show/963",
+          "method": "GET",
+          "rel": "html"
+        }
+      ],
+      "nfse_errors": [],
+      "service_values": {
+        "city_tax_code": "010501",
+        "service_amount": "2000.00",
+        "pis_amount": "13.00",
+        "inss_amount": "0.00",
+        "nfse_liquid_amount": "1877.00",
+        "iss_amount": "100.00",
+        "cnae_code": null,
+        "deduction_amount": "0.00",
+        "retained_iss_amount": null,
+        "tax_burden_amount": null,
+        "unconditioned_discount": "0.00",
+        "tax_burden_source": null,
+        "city_code": 3304557,
+        "tax_burden_percentage": null,
+        "description": "Prestação de serviços",
+        "ir_amount": "30.00",
+        "other_retentions": "0.00",
+        "discount_conditioning_amount": "0.00",
+        "iss_percentage": "5.00",
+        "calculation_base": "2000.00",
+        "csll_amount": "20.00",
+        "retained_iss": false,
+        "service_item_code": "0105",
+        "cofins_amount": "60.00"
+      },
+      "substitute_rps": null,
+      "environment": "sandbox",
+      "taker": {
+        "cnpj": "58153377000160",
+        "fancy_name": "ACME",
+        "city_inscription": "lalal",
+        "substitute_state_inscription": "opa oapo poapo ",
+        "address": {
+          "neighborhood": "Ipanema",
+          "country_abbreviation": "BR",
+          "reference_point": "",
+          "complement": "apto 898989",
+          "number": "213",
+          "neighborhood_type": "RED",
+          "street": "Rua Barão da Torre",
+          "country_code": "01058",
+          "city": "Rio de Janeiro",
+          "country": "BR",
+          "state": "RJ",
+          "street_type": "RUA",
+          "city_code": 3304557,
+          "zip_code": "22411001"
+        },
+        "state_inscription": "ISENTO",
+        "social_reason": "Acme Inc.",
+        "cpf": "",
+        "contact": {
+          "phone": "21212121212",
+          "email": ""
+        },
+        "special_situation": 0,
+        "foreign_taker": false
+      },
+      "emitter_id": 4,
+      "batch_id": null,
+      "service_values_rps_operation": null,
+      "service_values_rps_taxation": null,
+      "service_values_tipo_recolhimento": null,
+      "service_values_highlight_retentions": null,
+      "xml_url": "https://sandbox.emites.com.br/api/v1/nfse/963/xml",
+      "pdf_url": "https://sandbox.emites.com.br/api/v1/nfse/963/pdf",
+      "rps_situation": null,
+      "operation_nature": "1",
+      "special_regime": null,
+      "rps_type": null,
+      "serie": "contr",
+      "id": 963,
+      "is_complete": true,
+      "allow_incomplete": false,
+      "status": "accepted",
+      "description": "Processado pela Sefaz",
+      "nfse_key": "TCER-VBCB",
+      "nfse_number": 1074,
+      "protocol": null,
+      "send_nfse_taker": false,
+      "is_api": true,
+      "user_id": null,
+      "pdf_emissor": null,
+      "number": 19,
+      "emission_date": "2015-08-21T06:57:00",
+      "emission_date_nfse": null,
+      "other_informations": "Criado pelo Dom Contrato, contrato Aluguel do PSOffice para ACME, faturamento #2948.",
+      "competence": "2015-08-21T06:57:00",
+      "emitter_national_simple_optant": false,
+      "emitter_cultural_promoter": false,
+      "service_values_item_description": null,
+      "service_values_tax_burden_highlight": false,
+      "already_added": false
+    }
+  ]
+}

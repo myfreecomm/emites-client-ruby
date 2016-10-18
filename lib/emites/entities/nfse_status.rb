@@ -5,7 +5,7 @@ module Emites
       attribute :status,      String
       attribute :description, String
       attribute :nfse_key,    String
-      attribute :nfse_number, String
+      attribute :nfse_number, Integer
       attribute :number,      Integer
       attribute :mirror,      String
       attribute :xml,         String

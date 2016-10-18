@@ -12,24 +12,14 @@ module Emites
         @http = http
       end
 
-      def parsed_body(response)
-        MultiJson.load(response.body)
-      rescue MultiJson::ParseError
-        {}
-      end
-
       protected
 
       def respond_with_collection(response, naked_klass = entity_klass)
-        hash = parsed_body(response)
-        hash["collection"].map do |item|
-          naked_klass.new(item)
-        end
+        Emites::Entities::Collection.build(response, naked_klass)
       end
 
       def respond_with_entity(response, naked_klass = entity_klass)
-        item = parsed_body(response)
-        naked_klass.new(item)
+        naked_klass.new(response.parsed_body)
       end
 
       def base_klass

@@ -24,9 +24,24 @@ module Emites
       #
       #   Documentation: http://myfreecomm.github.io/emites/v1/modules/nfse.html#listagem
       #
-      # @return [Array] an array of Webhook
+      # @return Emites::Entities::Collection a collection of Emites::Entities::Nfse
       def list
         http.get("/nfse") do |response|
+          respond_with_collection(response)
+        end
+      end
+
+      # Lists all NFSes matching search parameters
+      #
+      # [API]
+      #   Method: <tt>GET /api/v1/nfse?status=:status&page=:page</tt>
+      #
+      #   Documentation: http://myfreecomm.github.io/emites/v1/modules/nfse.html#filtros
+      #
+      # @param params [Hash] an optional hash with filter parameters
+      # @return Emites::Entities::Collection a collection of Emites::Entities::Nfse
+      def search(params = {})
+        http.get("/nfse", params: filter(params)) do |response|
           respond_with_collection(response)
         end
       end
@@ -69,7 +84,7 @@ module Emites
       #   Documentation: http://myfreecomm.github.io/emites/sandbox/v1/modules/nfse.html#historico
       #
       # @param id [Integer] the Nfse id
-      # @return [Array] an array of Emites::Entities::NfseStatusTransition
+      # @return Emites::Entities::Collection a collection of Emites::Entities::NfseStatusTransition
       def history(id)
         http.get("/nfse/#{id}/history") do |response|
           respond_with_collection(response, Entities::NfseStatusTransition)
@@ -168,6 +183,30 @@ module Emites
       end
 
       notify :create, :update, :cancel, :destroy
+
+      private
+
+      PERMITTED_PARAMS = %W(
+        status
+        emitter_id
+        nfse_key
+        emission_date_lte
+        emission_date_gte
+        number
+        nfse_number
+        amount_lte
+        amount_gte
+        taker_social_reason
+        taker_cpf
+        taker_cnpj
+        is_complete
+        serie,
+        page
+      )
+
+      def filter(params)
+        Emites::Params.new(params).permit(PERMITTED_PARAMS)
+      end
     end
   end
 end

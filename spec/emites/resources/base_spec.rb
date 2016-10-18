@@ -39,20 +39,6 @@ describe Emites::Resources::Base do
     allow(Emites.configuration).to receive(:url).and_return("http://requestb.in")
   end
 
-  describe "#parsed_body" do
-    before do
-      allow(http).to receive(:send_request).and_return(request)
-    end
-
-    it "does not raise an error" do
-      expect{ subject.parseable }.not_to raise_error
-    end
-
-    it "response returns an empty hash" do
-      expect(subject.parseable).to eq({})
-    end
-  end
-
   describe ".notify" do
     before do
       allow(http).to receive(:send_request).and_return(request)

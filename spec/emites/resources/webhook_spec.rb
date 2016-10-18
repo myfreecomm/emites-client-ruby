@@ -22,7 +22,7 @@ describe Emites::Resources::Webhook do
     it "returns an array of Webhooks" do
       VCR.use_cassette("webhooks/list/success") do
         webhooks = subject.list
-        expect(webhooks).to be_a(Array)
+        expect(webhooks).to be_a(Emites::Entities::Collection)
         webhooks.each do |e|
           expect(e).to be_a(entity_klass)
         end
