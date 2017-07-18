@@ -25,6 +25,13 @@ module Emites
       attribute :other_retentions_percentage,       Decimal, precision: 5, scale: 2
       attribute :retained_iss_percentage,           Decimal, precision: 5, scale: 2
       attribute :unconditioned_discount_percentage, Decimal, precision: 5, scale: 2
+      attribute :pis_value,                         Decimal, precision: 16, scale: 2
+      attribute :ir_value,                          Decimal, precision: 16, scale: 2
+      attribute :inss_value,                        Decimal, precision: 16, scale: 2
+      attribute :retained_iss_value,                Decimal, precision: 16, scale: 2
+      attribute :other_retentions_value,            Decimal, precision: 16, scale: 2
+      attribute :cofins_value,                      Decimal, precision: 16, scale: 2
+      attribute :csll_value,                        Decimal, precision: 16, scale: 2
     end
   end
 end
