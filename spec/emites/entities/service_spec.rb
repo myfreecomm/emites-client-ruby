@@ -3,7 +3,8 @@ require "spec_helper"
 describe Emites::Entities::Service do
   subject { described_class.new({}) }
 
-  it_behaves_like "entity_attributes", [
+  it_behaves_like "entity_attributes",
+                  [
                     :id, :emitter_id, :name, :service_amount, :calculation_base,
                     :deduction_percentage, :retained_iss, :iss_percentage,
                     :pis_percentage, :cofins_percentage, :inss_percentage,
