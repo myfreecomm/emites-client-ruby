@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    emites-client (0.1.3)
+    emites-client (0.1.4)
       multi_json (~> 1.11)
       typhoeus (~> 0.8)
       virtus (~> 1.0)
